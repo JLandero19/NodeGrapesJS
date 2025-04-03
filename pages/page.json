@@ -1,0 +1,207 @@
+{
+  "assets": [
+    {
+      "type": "image",
+      "src": "https://picsum.photos/id/237/200/300",
+      "unitDim": "px",
+      "height": 300,
+      "width": 200,
+      "name": "Ejemplo 1"
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/picsum/200/300",
+      "unitDim": "px",
+      "height": 300,
+      "width": 200,
+      "name": "Ejemplo 2"
+    },
+    {
+      "type": "image",
+      "src": "https://fastly.picsum.photos/id/287/1200/800.jpg?hmac=e7Jgh7Yk7YtnlwGFvPly0-jKJZvIER9oSkZwisq3HoE",
+      "unitDim": "px",
+      "height": 800,
+      "width": 1200,
+      "name": "Ejemplo Image Hero"
+    }
+  ],
+  "styles": [
+    {
+      "selectors": [
+        "#i9cr"
+      ],
+      "style": {
+        "position": "relative",
+        "height": "75vh",
+        "background-size": "cover",
+        "background-position": "center",
+        "text-align": "center"
+      }
+    },
+    {
+      "selectors": [
+        "#iysf"
+      ],
+      "style": {
+        "position": "absolute",
+        "top": "50%",
+        "left": "50%",
+        "transform": "translate(-50%, -50%)"
+      }
+    },
+    {
+      "selectors": [
+        "#i98rn"
+      ],
+      "style": {
+        "font-size": "3rem",
+        "margin-bottom": "20px"
+      }
+    },
+    {
+      "selectors": [
+        "#icfcb"
+      ],
+      "style": {
+        "font-size": "1.2rem",
+        "margin-bottom": "30px"
+      }
+    },
+    {
+      "selectors": [
+        "#i0geo"
+      ],
+      "style": {
+        "padding": "10px 20px",
+        "font-size": "1rem",
+        "text-decoration": "none",
+        "border-radius": "5px"
+      }
+    },
+    {
+      "selectors": [
+        "hero"
+      ],
+      "style": {
+        "background-image": "url('https://fastly.picsum.photos/id/287/1200/800.jpg?hmac=e7Jgh7Yk7YtnlwGFvPly0-jKJZvIER9oSkZwisq3HoE')",
+        "background-repeat": "repeat",
+        "background-position": "center",
+        "background-attachment": "scroll",
+        "background-size": "cover"
+      }
+    },
+    {
+      "selectors": [
+        "hero-content"
+      ],
+      "style": {
+        "color": "white"
+      }
+    },
+    {
+      "selectors": [
+        "cta-button"
+      ],
+      "style": {
+        "background-color": "#0070ff",
+        "color": "white"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "frames": [
+        {
+          "component": {
+            "type": "wrapper",
+            "stylable": [
+              "background",
+              "background-color",
+              "background-image",
+              "background-repeat",
+              "background-attachment",
+              "background-position",
+              "background-size"
+            ],
+            "components": [
+              {
+                "tagName": "section",
+                "classes": [
+                  "hero"
+                ],
+                "attributes": {
+                  "id": "i9cr"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "hero-content"
+                    ],
+                    "attributes": {
+                      "id": "iysf"
+                    },
+                    "components": [
+                      {
+                        "tagName": "h1",
+                        "type": "text",
+                        "attributes": {
+                          "id": "i98rn"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "Bienvenidos a Nuestra Página"
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "p",
+                        "type": "text",
+                        "attributes": {
+                          "id": "icfcb"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "\n                        Esta es la descripción de nuestra sección hero. Puedes personalizarla como desees.\n                    "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "link",
+                        "classes": [
+                          "cta-button"
+                        ],
+                        "attributes": {
+                          "href": "#cta",
+                          "id": "i0geo"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "\n                        Descubre más\n                    "
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "head": {
+              "type": "head"
+            },
+            "docEl": {
+              "tagName": "html"
+            }
+          },
+          "id": "sUJHO05n9AdQsu81"
+        }
+      ],
+      "type": "main",
+      "id": "rNoDjNHRUQ5P0Kri"
+    }
+  ],
+  "symbols": [],
+  "dataSources": []
+}

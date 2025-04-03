@@ -1,0 +1,35 @@
+:root {
+    --gjs-primary-color: #444;
+    --gjs-secondary-color: rgba(255, 255, 255, 0.7);
+    --gjs-tertiary-color: #696969;
+    --gjs-quaternary-color: #00d9ff;
+}
+
+
+body { 
+    margin: 0; 
+}
+
+#gjs { 
+    height: 100vh; 
+}
+
+.gjs-one-bg {
+  background-color: var(--gjs-primary-color) !important; /* Fondo general */
+}
+
+.gjs-two-color {
+  color: #ffffff !important; /* Texto */
+}
+
+.gjs-three-bg {
+  background-color: var(--gjs-tertiary-color) !important; /* Paneles laterales */
+}
+
+.gjs-four-color {
+  color: #ddd !important; /* Texto en elementos secundarios */
+}
+
+.gjs-selected {
+  outline: 2px solid var(--gjs-quaternary-color) !important; /* Cambia el color del borde del elemento seleccionado */
+}
