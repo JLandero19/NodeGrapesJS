@@ -1,178 +1,409 @@
 {
-  "assets": [
-    {
-      "type": "image",
-      "src": "https://picsum.photos/id/237/200/300",
-      "unitDim": "px",
-      "height": 300,
-      "width": 200,
-      "name": "Ejemplo 1"
-    },
-    {
-      "type": "image",
-      "src": "https://picsum.photos/seed/picsum/200/300",
-      "unitDim": "px",
-      "height": 300,
-      "width": 200,
-      "name": "Ejemplo 2"
-    },
-    {
-      "type": "image",
-      "src": "https://fastly.picsum.photos/id/287/1200/800.jpg?hmac=e7Jgh7Yk7YtnlwGFvPly0-jKJZvIER9oSkZwisq3HoE",
-      "unitDim": "px",
-      "height": 800,
-      "width": 1200,
-      "name": "Ejemplo Image Hero"
-    }
-  ],
-  "styles": [
-    {
-      "selectors": [
-        "#ihpy"
-      ],
-      "style": {
-        "position": "relative",
-        "height": "75vh",
-        "background-size": "cover",
-        "background-position": "center",
-        "text-align": "center"
+  "data": {
+    "assets": [
+      {
+        "type": "image",
+        "src": "https://picsum.photos/id/237/200/300",
+        "unitDim": "px",
+        "height": 300,
+        "width": 200,
+        "name": "Ejemplo 1"
+      },
+      {
+        "type": "image",
+        "src": "https://picsum.photos/seed/picsum/200/300",
+        "unitDim": "px",
+        "height": 300,
+        "width": 200,
+        "name": "Ejemplo 2"
+      },
+      {
+        "type": "image",
+        "src": "https://fastly.picsum.photos/id/287/1200/800.jpg?hmac=e7Jgh7Yk7YtnlwGFvPly0-jKJZvIER9oSkZwisq3HoE",
+        "unitDim": "px",
+        "height": 800,
+        "width": 1200,
+        "name": "Ejemplo Image Hero"
       }
-    },
-    {
-      "selectors": [
-        "#ijwj"
-      ],
-      "style": {
-        "position": "absolute",
-        "top": "50%",
-        "left": "50%",
-        "transform": "translate(-50%, -50%)"
-      }
-    },
-    {
-      "selectors": [
-        "#ito2"
-      ],
-      "style": {
-        "font-size": "3rem",
-        "margin-bottom": "20px"
-      }
-    },
-    {
-      "selectors": [
-        "#igql"
-      ],
-      "style": {
-        "font-size": "1.2rem",
-        "margin-bottom": "30px"
-      }
-    },
-    {
-      "selectors": [
-        "#iedaz"
-      ],
-      "style": {
-        "padding": "10px 20px",
-        "font-size": "1rem",
-        "text-decoration": "none",
-        "border-radius": "5px"
-      }
-    }
-  ],
-  "pages": [
-    {
-      "frames": [
-        {
-          "component": {
-            "type": "wrapper",
-            "stylable": [
-              "background",
-              "background-color",
-              "background-image",
-              "background-repeat",
-              "background-attachment",
-              "background-position",
-              "background-size"
-            ],
-            "components": [
-              {
-                "tagName": "section",
-                "classes": [
-                  "hero"
-                ],
-                "attributes": {
-                  "id": "ihpy"
-                },
-                "components": [
-                  {
-                    "classes": [
-                      "hero-content"
-                    ],
-                    "attributes": {
-                      "id": "ijwj"
-                    },
-                    "components": [
-                      {
-                        "tagName": "h1",
-                        "type": "text",
-                        "attributes": {
-                          "id": "ito2"
-                        },
-                        "components": [
-                          {
-                            "type": "textnode",
-                            "content": "Bienvenidos a Nuestra Página"
-                          }
-                        ]
-                      },
-                      {
-                        "tagName": "p",
-                        "type": "text",
-                        "attributes": {
-                          "id": "igql"
-                        },
-                        "components": [
-                          {
-                            "type": "textnode",
-                            "content": "\n                        Esta es la descripción de nuestra sección hero. Puedes personalizarla como desees.\n                    "
-                          }
-                        ]
-                      },
-                      {
-                        "type": "link",
-                        "classes": [
-                          "cta-button"
-                        ],
-                        "attributes": {
-                          "href": "#cta",
-                          "id": "iedaz"
-                        },
-                        "components": [
-                          {
-                            "type": "textnode",
-                            "content": "\n                        Descubre más\n                    "
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "head": {
-              "type": "head"
-            },
-            "docEl": {
-              "tagName": "html"
-            }
-          },
-          "id": "mAdVL8zeOGFQC4Dk"
+    ],
+    "styles": [
+      {
+        "selectors": [
+          {
+            "name": "gjs-row",
+            "private": 1
+          }
+        ],
+        "style": {
+          "display": "table",
+          "padding-top": "10px",
+          "padding-right": "10px",
+          "padding-bottom": "10px",
+          "padding-left": "10px",
+          "width": "100%"
         }
-      ],
-      "type": "main",
-      "id": "b2mGvBjehK2QRIAY"
-    }
-  ],
-  "symbols": [],
-  "dataSources": []
+      },
+      {
+        "selectors": [
+          {
+            "name": "gjs-cell",
+            "private": 1
+          }
+        ],
+        "style": {
+          "width": "100%",
+          "display": "block"
+        },
+        "mediaText": "(max-width: 768px)",
+        "atRuleType": "media"
+      },
+      {
+        "selectors": [
+          "gjs-cell30"
+        ],
+        "style": {
+          "width": "100%",
+          "display": "block"
+        },
+        "mediaText": "(max-width: 768px)",
+        "atRuleType": "media"
+      },
+      {
+        "selectors": [
+          "gjs-cell70"
+        ],
+        "style": {
+          "width": "100%",
+          "display": "block"
+        },
+        "mediaText": "(max-width: 768px)",
+        "atRuleType": "media"
+      },
+      {
+        "selectors": [
+          {
+            "name": "gjs-cell",
+            "private": 1
+          }
+        ],
+        "style": {
+          "width": "8%",
+          "display": "table-cell",
+          "height": "75px"
+        }
+      },
+      {
+        "selectors": [
+          "#ixik"
+        ],
+        "style": {
+          "color": "black",
+          "border": "10px solid red"
+        }
+      },
+      {
+        "selectors": [
+          "#ikz3i"
+        ],
+        "style": {
+          "padding": "10px"
+        }
+      }
+    ],
+    "pages": [
+      {
+        "frames": [
+          {
+            "component": {
+              "type": "wrapper",
+              "stylable": [
+                "background",
+                "background-color",
+                "background-image",
+                "background-repeat",
+                "background-attachment",
+                "background-position",
+                "background-size"
+              ],
+              "attributes": {
+                "id": "ijrh"
+              },
+              "components": [
+                {
+                  "name": "Row",
+                  "droppable": ".gjs-cell",
+                  "resizable": {
+                    "tl": 0,
+                    "tc": 0,
+                    "tr": 0,
+                    "cl": 0,
+                    "cr": 0,
+                    "bl": 0,
+                    "br": 0,
+                    "minDim": 1
+                  },
+                  "classes": [
+                    {
+                      "name": "gjs-row",
+                      "private": 1
+                    }
+                  ],
+                  "attributes": {
+                    "id": "iuoi"
+                  },
+                  "components": [
+                    {
+                      "name": "Cell",
+                      "draggable": ".gjs-row",
+                      "resizable": {
+                        "tl": 0,
+                        "tc": 0,
+                        "tr": 0,
+                        "cl": 0,
+                        "cr": 1,
+                        "bl": 0,
+                        "br": 0,
+                        "minDim": 1,
+                        "bc": 0,
+                        "currentUnit": 1,
+                        "step": 0.2
+                      },
+                      "classes": [
+                        {
+                          "name": "gjs-cell",
+                          "private": 1
+                        }
+                      ],
+                      "components": [
+                        {
+                          "type": "image",
+                          "resizable": {
+                            "ratioDefault": 1
+                          },
+                          "attributes": {
+                            "id": "ixik",
+                            "src": "https://picsum.photos/id/237/200/300"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Cell",
+                      "draggable": ".gjs-row",
+                      "resizable": {
+                        "tl": 0,
+                        "tc": 0,
+                        "tr": 0,
+                        "cl": 0,
+                        "cr": 1,
+                        "bl": 0,
+                        "br": 0,
+                        "minDim": 1,
+                        "bc": 0,
+                        "currentUnit": 1,
+                        "step": 0.2
+                      },
+                      "classes": [
+                        {
+                          "name": "gjs-cell",
+                          "private": 1
+                        }
+                      ],
+                      "components": [
+                        {
+                          "type": "text",
+                          "attributes": {
+                            "id": "ikz3i"
+                          },
+                          "components": [
+                            {
+                              "type": "textnode",
+                              "content": "Insert your text here"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Cell",
+                      "draggable": ".gjs-row",
+                      "resizable": {
+                        "tl": 0,
+                        "tc": 0,
+                        "tr": 0,
+                        "cl": 0,
+                        "cr": 1,
+                        "bl": 0,
+                        "br": 0,
+                        "minDim": 1,
+                        "bc": 0,
+                        "currentUnit": 1,
+                        "step": 0.2
+                      },
+                      "classes": [
+                        {
+                          "name": "gjs-cell",
+                          "private": 1
+                        }
+                      ],
+                      "attributes": {
+                        "id": "ifho"
+                      },
+                      "components": [
+                        {
+                          "type": "form",
+                          "attributes": {
+                            "method": "get",
+                            "id": "iiic3"
+                          },
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "type": "label",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Name"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "input",
+                                  "void": true,
+                                  "attributes": {
+                                    "type": "text"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "components": [
+                                {
+                                  "type": "label",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Email"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "input",
+                                  "void": true,
+                                  "attributes": {
+                                    "type": "email"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "components": [
+                                {
+                                  "type": "label",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Gender"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "void": true,
+                                  "attributes": {
+                                    "type": "checkbox",
+                                    "value": "M"
+                                  }
+                                },
+                                {
+                                  "type": "label",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "M"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "checkbox",
+                                  "void": true,
+                                  "attributes": {
+                                    "type": "checkbox",
+                                    "value": "F"
+                                  }
+                                },
+                                {
+                                  "type": "label",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "F"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "components": [
+                                {
+                                  "type": "label",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Message"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "textarea"
+                                }
+                              ]
+                            },
+                            {
+                              "components": [
+                                {
+                                  "type": "button",
+                                  "attributes": {
+                                    "type": "button"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Send"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "head": {
+                "type": "head"
+              },
+              "docEl": {
+                "tagName": "html"
+              }
+            },
+            "id": "t85eqCbulUVBVe9g"
+          }
+        ],
+        "type": "main",
+        "id": "GfyC4bO1fe0m6mgm"
+      }
+    ],
+    "symbols": [],
+    "dataSources": []
+  },
+  "html": {
+    "htmlContent": "<body id=\"ijrh\"><div class=\"gjs-row\" id=\"iuoi\"><div class=\"gjs-cell\"><img id=\"ixik\" src=\"https://picsum.photos/id/237/200/300\"/></div><div class=\"gjs-cell\"><div id=\"ikz3i\">Insert your text here</div></div><div class=\"gjs-cell\" id=\"ifho\"><form method=\"get\" id=\"iiic3\"><div><label>Name</label><input type=\"text\"/></div><div><label>Email</label><input type=\"email\"/></div><div><label>Gender</label><input type=\"checkbox\" value=\"M\"/><label>M</label><input type=\"checkbox\" value=\"F\"/><label>F</label></div><div><label>Message</label><textarea></textarea></div><div><button type=\"button\">Send</button></div></form></div></div></body>"
+  },
+  "css": {
+    "cssContent": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:table;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;width:100%;}.gjs-cell{width:8%;display:table-cell;height:75px;}#ixik{color:black;border:10px solid red;}#ikz3i{padding:10px;}@media (max-width: 768px){.gjs-cell{width:100%;display:block;}}"
+  }
 }

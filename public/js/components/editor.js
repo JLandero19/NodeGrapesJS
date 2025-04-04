@@ -1,11 +1,15 @@
 import { blocksExample } from '../block/blocks-example.js';
-import { loadPage, downloadZIP } from '../functions.js';
+import { loadPage, deletePage, downloadZIP } from '../functions.js';
 
-export function editor() {
+export function editor(server) {
     const editor = grapesjs.init({
         height: '100vh',
-        storageManager: false,
         container: '#gjs',
+        storageManager: {
+            type: 'local',
+            autosave: true,
+            autoload: true
+        },
         fromElement: true,
         plugins: [
             'gjs-blocks-basic',             // Agregar plugin de bloques básicos
@@ -84,78 +88,93 @@ export function editor() {
         if (typedBlock) {
             typedBlock.set('category', 'Extra');
         }
-    
         // Llamar a la función para cargar la página
-        loadPage(editor);
-    });
-    
-    // Botones de los paneles
-    editor.Panels.addButton('options', {
-        id: 'download-html',
-        className: 'fa fa-download',
-        command: 'download-html',
-        attributes: { title: 'Descargar HTML' },
-    });
-    
-    editor.Panels.addButton('options', {
-        id: 'save-page',
-        className: 'fa fa-save',
-        command: 'save-page',
-        attributes: { title: 'Guardar página' },
-    });
-    
-    editor.Panels.addButton('options', {
-        id: 'clear-page',
-        className: 'fa fa-trash',
-        command: 'core:canvas-clear',
-        attributes: { title: 'Borrar' }
-    });
-    
-    // Comandos que ejecutan los botones
-    editor.Commands.add('download-html', {
-        run(editor) {
-            const htmlContent = editor.getHtml();
-            const cssContent = editor.getCss();
-    
-            const zip = new JSZip();
-    
-            zip.file('index.html', htmlContent);
-            zip.file('styles.css', cssContent); 
-    
-            zip.generateAsync({ type: 'blob' }).then(function (content) {
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(content);
-                link.download = 'pagina_grapejs.zip';
-                link.click();
-            });
-        }
-    });
-    
-    editor.Commands.add('save-page', {
-        run: async function (editor) {
-            // Obtener los datos del editor
-            const storedProjectData = await editor.store();
-            console.log(storedProjectData);
-    
-            // Enviar los datos al servidor
-            fetch('/save-page', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ data: storedProjectData }) // Los datos están dentro de una propiedad 'data'
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Proyecto guardado correctamente', data);
-            })
-            .catch(error => {
-                console.error('Error al guardar el proyecto:', error);
-            });
-        }
-    });
+        loadPage(server, editor);
 
-    // Botón "Descagar ZIP" del modal Code
-    downloadZIP();
+        // Botones de los paneles
+        editor.Panels.addButton('options', {
+            id: 'download-html',
+            className: 'fa fa-download',
+            command: 'download-html',
+            attributes: { title: 'Descargar HTML' },
+        });
+        
+        editor.Panels.addButton('options', {
+            id: 'save-page',
+            className: 'fa fa-save',
+            command: 'save-page',
+            attributes: { title: 'Guardar página' },
+        });
+        
+        editor.Panels.addButton('options', {
+            id: 'clear-page',
+            className: 'fa fa-trash',
+            command: function(editor) {
+                const confirmation = window.confirm('¿Estás seguro de que deseas borrar el contenido?');
+                if (confirmation) {
+                    editor.setComponents('');
+                    editor.setStyle('');
+                    editor.store(false);
+
+                    localStorage.removeItem('gjs-components');
+                    localStorage.removeItem('gjs-styles');
+                    localStorage.removeItem('gjs-assets');
+
+                    console.log('Editor y localStorage limpiados');
+                    deletePage(server, editor);
+                }
+            },
+            attributes: { title: 'Borrar' }
+        });
+
+        // Comandos que ejecutan los botones
+        editor.Commands.add('download-html', {
+            run(editor) {
+                const htmlContent = editor.getHtml();
+                const cssContent = editor.getCss();
+        
+                const zip = new JSZip();
+        
+                zip.file('index.html', htmlContent);
+                zip.file('styles.css', cssContent); 
+        
+                zip.generateAsync({ type: 'blob' }).then(function (content) {
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(content);
+                    link.download = 'pagina_grapejs.zip';
+                    link.click();
+                });
+            }
+        });
+        
+        editor.Commands.add('save-page', {
+            run: async function (editor) {
+                const htmlContent = editor.getHtml();
+                const cssContent = editor.getCss();
+                // Obtener los datos del editor
+                const storedProjectData = await editor.store();
+                console.log(storedProjectData);
+        
+                // Enviar los datos al servidor
+                fetch('/save-page', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ data: storedProjectData, html: { htmlContent }, css: { cssContent } }) // Los datos están dentro de una propiedad 'data'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Proyecto guardado correctamente', data);
+                })
+                .catch(error => {
+                    console.error('Error al guardar el proyecto:', error);
+                });
+            }
+        });
+
+        // Botón "Descagar ZIP" del modal Code
+        downloadZIP();
+    });
 }
 

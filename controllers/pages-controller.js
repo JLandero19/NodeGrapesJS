@@ -6,7 +6,7 @@ const path = require('node:path'); // Asegúrate de importar el módulo 'path' p
 const savePagePOST = (req, res = response) => {
     try {
         // Suponiendo que los datos son enviados directamente en el cuerpo de la solicitud (sin la propiedad 'data')
-        const data = req.body.data; // Aquí usamos req.body directamente si no se está envolviendo en 'data'
+        const data = req.body; // Aquí usamos req.body directamente si no se está envolviendo en 'data'
 
         console.log(data);
 
@@ -59,11 +59,28 @@ const loadPageGET =  (req, res = response) => {
             }
         });
     } else {
+        
         res.status(404).json({ message: 'No se encontró ninguna página cargada' });
+    }
+}
+
+const deletePageGET =  (req, res = response) => {
+    const filePath = path.join(__dirname, '../pages', 'page.json');
+
+    // Verificar si el archivo existe
+    if (fs.existsSync(filePath)) {
+        fs.unlink(filePath, (err) => {
+            if (err) {
+                console.error('Error al eliminar el archivo:', err);
+            } else {
+                console.log('Archivo eliminado con éxito');
+            }
+        });
     }
 }
 
 module.exports = {
     loadPageGET,
-    savePagePOST
+    savePagePOST,
+    deletePageGET
 }
