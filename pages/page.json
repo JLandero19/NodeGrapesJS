@@ -28,7 +28,7 @@
   "styles": [
     {
       "selectors": [
-        "#i9cr"
+        "#ihpy"
       ],
       "style": {
         "position": "relative",
@@ -40,7 +40,7 @@
     },
     {
       "selectors": [
-        "#iysf"
+        "#ijwj"
       ],
       "style": {
         "position": "absolute",
@@ -51,7 +51,7 @@
     },
     {
       "selectors": [
-        "#i98rn"
+        "#ito2"
       ],
       "style": {
         "font-size": "3rem",
@@ -60,7 +60,7 @@
     },
     {
       "selectors": [
-        "#icfcb"
+        "#igql"
       ],
       "style": {
         "font-size": "1.2rem",
@@ -69,42 +69,13 @@
     },
     {
       "selectors": [
-        "#i0geo"
+        "#iedaz"
       ],
       "style": {
         "padding": "10px 20px",
         "font-size": "1rem",
         "text-decoration": "none",
         "border-radius": "5px"
-      }
-    },
-    {
-      "selectors": [
-        "hero"
-      ],
-      "style": {
-        "background-image": "url('https://fastly.picsum.photos/id/287/1200/800.jpg?hmac=e7Jgh7Yk7YtnlwGFvPly0-jKJZvIER9oSkZwisq3HoE')",
-        "background-repeat": "repeat",
-        "background-position": "center",
-        "background-attachment": "scroll",
-        "background-size": "cover"
-      }
-    },
-    {
-      "selectors": [
-        "hero-content"
-      ],
-      "style": {
-        "color": "white"
-      }
-    },
-    {
-      "selectors": [
-        "cta-button"
-      ],
-      "style": {
-        "background-color": "#0070ff",
-        "color": "white"
       }
     }
   ],
@@ -130,7 +101,7 @@
                   "hero"
                 ],
                 "attributes": {
-                  "id": "i9cr"
+                  "id": "ihpy"
                 },
                 "components": [
                   {
@@ -138,14 +109,14 @@
                       "hero-content"
                     ],
                     "attributes": {
-                      "id": "iysf"
+                      "id": "ijwj"
                     },
                     "components": [
                       {
                         "tagName": "h1",
                         "type": "text",
                         "attributes": {
-                          "id": "i98rn"
+                          "id": "ito2"
                         },
                         "components": [
                           {
@@ -158,7 +129,7 @@
                         "tagName": "p",
                         "type": "text",
                         "attributes": {
-                          "id": "icfcb"
+                          "id": "igql"
                         },
                         "components": [
                           {
@@ -174,7 +145,7 @@
                         ],
                         "attributes": {
                           "href": "#cta",
-                          "id": "i0geo"
+                          "id": "iedaz"
                         },
                         "components": [
                           {
@@ -195,11 +166,11 @@
               "tagName": "html"
             }
           },
-          "id": "sUJHO05n9AdQsu81"
+          "id": "mAdVL8zeOGFQC4Dk"
         }
       ],
       "type": "main",
-      "id": "rNoDjNHRUQ5P0Kri"
+      "id": "b2mGvBjehK2QRIAY"
     }
   ],
   "symbols": [],
