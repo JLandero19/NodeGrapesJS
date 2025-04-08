@@ -3,6 +3,7 @@ const express = require('express');
 class Server {
     constructor() {
         this.app = express();
+        this.domain = process.env.DOMAIN; // Recoge el dominio por el que escucha
         this.port = process.env.PORT; // Recoge el puerto por el que escucha
         this.middleware;
     }

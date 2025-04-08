@@ -39,7 +39,7 @@ const savePagePOST = (req, res = response) => {
 
 const deletePageGET =  (req, res = response) => {
     const filePath = path.join(__dirname, '../pages', 'page.json');
-
+    console.log(filePath);
     // Verificar si el archivo existe
     if (fs.existsSync(filePath)) {
         fs.unlink(filePath, (err) => {

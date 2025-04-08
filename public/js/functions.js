@@ -1,15 +1,16 @@
 // Hacer una solicitud GET al servidor para obtener los datos de la página
-export async function loadPage(server, editor) {
+export async function loadPage(editor) {
     try {
         // Realizamos la solicitud GET
-        const response = await fetch(`${server}/load-page`);
+        const response = await fetch(`/load-page`);
 
         // Comprobamos si la respuesta fue exitosa
         if (response.ok) {
             const data = await response.json();  // Parseamos los datos JSON
+            
             // Si los datos existen, cargarlos en el editor de GrapesJS
             console.log('Datos de la página cargados:', data);
-            editor.loadProjectData(data);
+            editor.loadProjectData(data.data);
         } else if (response.status === 404) {
             // Si no se encuentra el archivo
             console.log('No hay ninguna página cargada');
@@ -21,10 +22,10 @@ export async function loadPage(server, editor) {
     }
 }
 
-export async function deletePage(server, editor) {
+export async function deletePage(editor) {
     try {
         // Realizamos la solicitud GET
-        const response = await fetch(`${server}/delete-page`);
+        const response = await fetch(`/delete-page`);
 
         // Comprobamos si la respuesta fue exitosa
         if (response.ok) {

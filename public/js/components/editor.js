@@ -62,6 +62,22 @@ export function editor() {
             modalTitle: 'Selecciona una imagen',
             modalCloseBtnText: 'Cerrar',
         },
+        canvas: {
+            styles: [
+                "../../assets/vendor/bootstrap-icons/font/bootstrap-icons.css",
+                "../../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css",
+                "../../assets/vendor/swiper/swiper-bundle.min.css",
+                "../../assets/css/theme.min.css"
+            ],
+            scripts: [
+                "../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js",
+                "../../assets/vendor/hs-header/dist/hs-header.min.js",
+                "../../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js",
+                "../../assets/vendor/hs-go-to/dist/hs-go-to.min.js",
+                "../../assets/vendor/swiper/swiper-bundle.min.js",
+                "../../assets/js/theme.min.js"
+            ]
+        },
     });
     
     editor.on('load', () => {
@@ -119,7 +135,7 @@ export function editor() {
                 localStorage.removeItem('gjs-assets');
 
                 console.log('Editor y localStorage limpiados');
-                deletePage(server, editor);
+                deletePage(editor);
             }
         },
         attributes: { title: 'Borrar' }

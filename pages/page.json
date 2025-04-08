@@ -29,85 +29,58 @@
     "styles": [
       {
         "selectors": [
-          {
-            "name": "gjs-row",
-            "private": 1
-          }
+          "#ivndn"
         ],
         "style": {
-          "display": "table",
-          "padding-top": "10px",
-          "padding-right": "10px",
-          "padding-bottom": "10px",
-          "padding-left": "10px",
-          "width": "100%"
+          "min-width": "25rem"
         }
       },
       {
         "selectors": [
-          {
-            "name": "gjs-cell",
-            "private": 1
-          }
+          "#i8iy5"
         ],
         "style": {
-          "width": "100%",
-          "display": "block"
-        },
-        "mediaText": "(max-width: 768px)",
-        "atRuleType": "media"
-      },
-      {
-        "selectors": [
-          "gjs-cell30"
-        ],
-        "style": {
-          "width": "100%",
-          "display": "block"
-        },
-        "mediaText": "(max-width: 768px)",
-        "atRuleType": "media"
-      },
-      {
-        "selectors": [
-          "gjs-cell70"
-        ],
-        "style": {
-          "width": "100%",
-          "display": "block"
-        },
-        "mediaText": "(max-width: 768px)",
-        "atRuleType": "media"
-      },
-      {
-        "selectors": [
-          {
-            "name": "gjs-cell",
-            "private": 1
-          }
-        ],
-        "style": {
-          "width": "8%",
-          "display": "table-cell",
-          "height": "75px"
+          "min-width": "42rem"
         }
       },
       {
         "selectors": [
-          "#ipk4i"
+          "#i9yzaz"
         ],
         "style": {
-          "width": "17rem",
-          "margin-right": "-10rem"
+          "min-width": "12rem"
         }
       },
       {
         "selectors": [
-          "#irfqw"
+          "#ir7vrf"
         ],
         "style": {
-          "width": "14rem",
-          "margin-left": "-10rem"
+          "min-width": "20rem"
+        }
+      },
+      {
+        "selectors": [
+          "#ild9ye"
+        ],
+        "style": {
+          "max-width": "30rem"
+        }
+      },
+      {
+        "selectors": [
+          "#it7hpj"
+        ],
+        "style": {
+          "max-width": "12rem"
+        }
+      },
+      {
+        "selectors": [
+          "#if9m5h"
+        ],
+        "style": {
+          "max-width": "16rem"
         }
       }
     ],
@@ -126,104 +99,1791 @@
                 "background-position",
                 "background-size"
               ],
+              "attributes": {
+                "id": "iiga"
+              },
               "components": [
                 {
-                  "name": "Row",
-                  "droppable": ".gjs-cell",
-                  "resizable": {
-                    "tl": 0,
-                    "tc": 0,
-                    "tr": 0,
-                    "cl": 0,
-                    "cr": 0,
-                    "bl": 0,
-                    "br": 0,
-                    "minDim": 1
-                  },
+                  "tagName": "header",
                   "classes": [
-                    {
-                      "name": "gjs-row",
-                      "private": 1
-                    }
+                    "navbar",
+                    "navbar-expand-lg",
+                    "navbar-center",
+                    "navbar-light",
+                    "bg-white"
                   ],
                   "attributes": {
-                    "id": "ikqx"
+                    "id": "header-2"
                   },
                   "components": [
                     {
-                      "name": "Cell",
-                      "draggable": ".gjs-row",
-                      "resizable": {
-                        "tl": 0,
-                        "tc": 0,
-                        "tr": 0,
-                        "cl": 0,
-                        "cr": 1,
-                        "bl": 0,
-                        "br": 0,
-                        "minDim": 1,
-                        "bc": 0,
-                        "currentUnit": 1,
-                        "step": 0.2
-                      },
                       "classes": [
+                        "container"
+                      ],
+                      "components": [
                         {
-                          "name": "gjs-cell",
-                          "private": 1
+                          "tagName": "nav",
+                          "classes": [
+                            "js-mega-menu",
+                            "navbar-nav-wrap"
+                          ],
+                          "components": [
+                            {
+                              "type": "comment",
+                              "content": " Default Logo "
+                            },
+                            {
+                              "type": "link",
+                              "editable": false,
+                              "classes": [
+                                "navbar-brand"
+                              ],
+                              "attributes": {
+                                "href": "../index.html",
+                                "aria-label": "Unify"
+                              },
+                              "components": [
+                                {
+                                  "type": "image",
+                                  "resizable": {
+                                    "ratioDefault": 1
+                                  },
+                                  "classes": [
+                                    "navbar-brand-logo"
+                                  ],
+                                  "attributes": {
+                                    "src": "./assets/svg/logos/logo.svg",
+                                    "alt": "Image Description"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "comment",
+                              "content": " End Default Logo "
+                            },
+                            {
+                              "type": "comment",
+                              "content": " Toggler "
+                            },
+                            {
+                              "type": "button",
+                              "classes": [
+                                "navbar-toggler"
+                              ],
+                              "attributes": {
+                                "type": "button",
+                                "data-bs-toggle": "collapse",
+                                "data-bs-target": "#navbarNavDropdown",
+                                "aria-controls": "navbarNavDropdown",
+                                "aria-expanded": "false",
+                                "aria-label": "Toggle navigation"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Send"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "comment",
+                              "content": " End Toggler "
+                            },
+                            {
+                              "type": "comment",
+                              "content": " Collapse "
+                            },
+                            {
+                              "classes": [
+                                "collapse",
+                                "navbar-collapse"
+                              ],
+                              "attributes": {
+                                "id": "navbarNavDropdown"
+                              },
+                              "components": [
+                                {
+                                  "tagName": "ul",
+                                  "classes": [
+                                    "navbar-nav",
+                                    "nav-pills"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "comment",
+                                      "content": " Landings "
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "classes": [
+                                        "hs-has-mega-menu",
+                                        "nav-item"
+                                      ],
+                                      "attributes": {
+                                        "data-hs-mega-menu-item-options": "{\n                        \"desktop\": {\n                        \"maxWidth\": \"40rem\"\n                        }\n                    }"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "hs-mega-menu-invoker",
+                                            "nav-link",
+                                            "dropdown-toggle"
+                                          ],
+                                          "attributes": {
+                                            "id": "landingsMegaMenu",
+                                            "aria-current": "page",
+                                            "href": "#",
+                                            "role": "button",
+                                            "aria-expanded": "false"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Landings"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " Mega Menu "
+                                        },
+                                        {
+                                          "classes": [
+                                            "hs-mega-menu",
+                                            "dropdown-menu"
+                                          ],
+                                          "attributes": {
+                                            "aria-labelledby": "landingsMegaMenu",
+                                            "id": "ivndn"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "comment",
+                                              "content": " Main Content "
+                                            },
+                                            {
+                                              "classes": [
+                                                "row"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "col-lg",
+                                                    "d-none",
+                                                    "d-lg-block"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "classes": [
+                                                        "d-flex",
+                                                        "align-items-start",
+                                                        "flex-column",
+                                                        "bg-light",
+                                                        "rounded-3",
+                                                        "h-100",
+                                                        "p-4"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "fs-3",
+                                                            "fw-bold",
+                                                            "d-block"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Landings"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "p",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "text-body"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Accelerate the way your business builds modern sites at scale."
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "classes": [
+                                                            "mt-auto"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "tagName": "p",
+                                                              "classes": [
+                                                                "mb-1"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "link",
+                                                                  "classes": [
+                                                                    "small",
+                                                                    "text-dark"
+                                                                  ],
+                                                                  "attributes": {
+                                                                    "href": "#"
+                                                                  },
+                                                                  "components": [
+                                                                    {
+                                                                      "type": "textnode",
+                                                                      "content": "Learn more "
+                                                                    },
+                                                                    {
+                                                                      "tagName": "i",
+                                                                      "classes": [
+                                                                        "bi-arrow-right-short",
+                                                                        "fs-4"
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "tagName": "p",
+                                                              "classes": [
+                                                                "mb-1"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "link",
+                                                                  "classes": [
+                                                                    "small",
+                                                                    "text-dark"
+                                                                  ],
+                                                                  "attributes": {
+                                                                    "href": "#"
+                                                                  },
+                                                                  "components": [
+                                                                    {
+                                                                      "type": "textnode",
+                                                                      "content": "Why Unify Template "
+                                                                    },
+                                                                    {
+                                                                      "tagName": "i",
+                                                                      "classes": [
+                                                                        "bi-arrow-right-short",
+                                                                        "fs-4"
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "classes": [
+                                                    "col-sm"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "classes": [
+                                                        "navbar-dropdown-menu-inner"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "dropdown-header"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Classic"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../index.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "bi-building",
+                                                                "me-2"
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": " Corporate"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../landing-business.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "bi-briefcase",
+                                                                "me-2"
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": " Business "
+                                                            },
+                                                            {
+                                                              "tagName": "span",
+                                                              "type": "text",
+                                                              "classes": [
+                                                                "badge",
+                                                                "text-primary"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "textnode",
+                                                                  "content": "New"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../landing-consulting.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "bi-chat-right-dots",
+                                                                "me-2"
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": " Consulting "
+                                                            },
+                                                            {
+                                                              "tagName": "span",
+                                                              "type": "text",
+                                                              "classes": [
+                                                                "badge",
+                                                                "text-primary"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "textnode",
+                                                                  "content": "New"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../landing-saas.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "bi-tropical-storm",
+                                                                "me-2"
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": " SaaS"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../landing-services.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "tagName": "i",
+                                                              "classes": [
+                                                                "bi-gear",
+                                                                "me-2"
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": " Services"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "comment",
+                                              "content": " End Main Content "
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " End Mega Menu "
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End Landings "
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " Pages "
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "classes": [
+                                        "hs-has-mega-menu",
+                                        "nav-item"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "hs-mega-menu-invoker",
+                                            "nav-link",
+                                            "dropdown-toggle"
+                                          ],
+                                          "attributes": {
+                                            "id": "pagesMegaMenu",
+                                            "href": "#",
+                                            "role": "button",
+                                            "aria-expanded": "false"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Pages"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " Mega Menu "
+                                        },
+                                        {
+                                          "classes": [
+                                            "hs-mega-menu",
+                                            "hs-position-right",
+                                            "dropdown-menu",
+                                            "w-100"
+                                          ],
+                                          "attributes": {
+                                            "aria-labelledby": "pagesMegaMenu",
+                                            "id": "i8iy5"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "comment",
+                                              "content": " Main Content "
+                                            },
+                                            {
+                                              "classes": [
+                                                "navbar-dropdown-menu-inner"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "row"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "classes": [
+                                                        "col-sm-6",
+                                                        "col-md-3"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "dropdown-header"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Company"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-about.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "About"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-customer-stories.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Customer Stories"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-customer-story.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Customer Story"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-help-center.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Help Center"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-help-center-categories.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Help Center: Categories"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-help-center-article.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Help Center: Article"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "classes": [
+                                                        "col-sm-6",
+                                                        "col-md-3",
+                                                        "mb-3",
+                                                        "mb-md-0"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "dropdown-header",
+                                                            "invisible"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Company"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-careers.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Careers"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-careers-role-overview.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Careers: Role Overview"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-careers-apply.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Careers: Apply"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-hire-us.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Hire Us"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-login.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Log In"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-signup.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Sign Up"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-reset-password.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Forgot Password"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "classes": [
+                                                        "col-sm-6",
+                                                        "col-md-3",
+                                                        "mb-3",
+                                                        "mb-md-0"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "dropdown-header"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Portfolio"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../portfolio-modern.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Modern"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../portfolio-case-study.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Case Study"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "classes": [
+                                                        "col-sm-6",
+                                                        "col-md-3"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "dropdown-header"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Specialty pages"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-pricing.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Pricing"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-contacts.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Contacts"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-coming-soon.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Coming Soon"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-coming-soon-simple.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Coming Soon: Simple"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-error-404.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Error 404"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-terms.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Terms & Conditions"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../page-privacy.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Privacy & Policy"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "comment",
+                                                  "content": " End Row "
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "comment",
+                                              "content": " End Main Content "
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " End Mega Menu "
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End Pages "
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " Blog "
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "classes": [
+                                        "hs-has-mega-menu",
+                                        "nav-item"
+                                      ],
+                                      "attributes": {
+                                        "data-hs-mega-menu-item-options": "{\n                        \"desktop\": {\n                        \"maxWidth\": \"50rem\"\n                        }\n                    }"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "hs-mega-menu-invoker",
+                                            "nav-link",
+                                            "dropdown-toggle"
+                                          ],
+                                          "attributes": {
+                                            "id": "blogMegaMenu",
+                                            "href": "#",
+                                            "role": "button",
+                                            "aria-expanded": "false"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Blog"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " Mega Menu "
+                                        },
+                                        {
+                                          "classes": [
+                                            "hs-mega-menu",
+                                            "dropdown-menu"
+                                          ],
+                                          "attributes": {
+                                            "aria-labelledby": "blogMegaMenu",
+                                            "id": "i9yzaz"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "comment",
+                                              "content": " Main Content "
+                                            },
+                                            {
+                                              "classes": [
+                                                "row"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "col-lg",
+                                                    "d-none",
+                                                    "d-lg-block"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "classes": [
+                                                        "bg-light",
+                                                        "rounded-3",
+                                                        "h-100",
+                                                        "p-4"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "d-block",
+                                                            "fs-4",
+                                                            "fw-bold",
+                                                            "text-dark",
+                                                            "mb-3"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Latest from the Blog"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "classes": [
+                                                            "row"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "classes": [
+                                                                "col-md-6",
+                                                                "mb-3",
+                                                                "mb-md-0"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "comment",
+                                                                  "content": " Card "
+                                                                },
+                                                                {
+                                                                  "type": "link",
+                                                                  "editable": false,
+                                                                  "classes": [
+                                                                    "d-block"
+                                                                  ],
+                                                                  "attributes": {
+                                                                    "href": "../documentation/index.html"
+                                                                  },
+                                                                  "components": [
+                                                                    {
+                                                                      "type": "image",
+                                                                      "resizable": {
+                                                                        "ratioDefault": 1
+                                                                      },
+                                                                      "classes": [
+                                                                        "img-fluid",
+                                                                        "rounded-2",
+                                                                        "mb-2"
+                                                                      ],
+                                                                      "attributes": {
+                                                                        "src": "../assets/svg/components/card-1.svg",
+                                                                        "alt": "Image Description"
+                                                                      }
+                                                                    },
+                                                                    {
+                                                                      "tagName": "span",
+                                                                      "type": "text",
+                                                                      "classes": [
+                                                                        "fs-4",
+                                                                        "fw-medium",
+                                                                        "text-dark",
+                                                                        "text-inherit"
+                                                                      ],
+                                                                      "components": [
+                                                                        {
+                                                                          "type": "textnode",
+                                                                          "content": "Documentation"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "tagName": "p",
+                                                                      "type": "text",
+                                                                      "classes": [
+                                                                        "fs-6",
+                                                                        "text-body"
+                                                                      ],
+                                                                      "components": [
+                                                                        {
+                                                                          "type": "textnode",
+                                                                          "content": "Development guides for building projects with Unify"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "tagName": "span",
+                                                                      "type": "text",
+                                                                      "classes": [
+                                                                        "link",
+                                                                        "link-pointer"
+                                                                      ],
+                                                                      "components": [
+                                                                        {
+                                                                          "type": "textnode",
+                                                                          "content": "Learn more"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "type": "comment",
+                                                                  "content": " End Card "
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "comment",
+                                                              "content": " End Col "
+                                                            },
+                                                            {
+                                                              "classes": [
+                                                                "col-md-6"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "comment",
+                                                                  "content": " Card "
+                                                                },
+                                                                {
+                                                                  "type": "link",
+                                                                  "editable": false,
+                                                                  "classes": [
+                                                                    "d-block"
+                                                                  ],
+                                                                  "attributes": {
+                                                                    "href": "../snippets/index.html"
+                                                                  },
+                                                                  "components": [
+                                                                    {
+                                                                      "type": "image",
+                                                                      "resizable": {
+                                                                        "ratioDefault": 1
+                                                                      },
+                                                                      "classes": [
+                                                                        "img-fluid",
+                                                                        "rounded-2",
+                                                                        "mb-2"
+                                                                      ],
+                                                                      "attributes": {
+                                                                        "src": "../assets/svg/components/card-2.svg",
+                                                                        "alt": "Image Description"
+                                                                      }
+                                                                    },
+                                                                    {
+                                                                      "tagName": "span",
+                                                                      "type": "text",
+                                                                      "classes": [
+                                                                        "fs-4",
+                                                                        "fw-medium",
+                                                                        "text-dark",
+                                                                        "text-inherit"
+                                                                      ],
+                                                                      "components": [
+                                                                        {
+                                                                          "type": "textnode",
+                                                                          "content": "Snippets"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "tagName": "p",
+                                                                      "type": "text",
+                                                                      "classes": [
+                                                                        "fs-6",
+                                                                        "text-body"
+                                                                      ],
+                                                                      "components": [
+                                                                        {
+                                                                          "type": "textnode",
+                                                                          "content": "Move quickly with copy-to-clipboard feature"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "tagName": "span",
+                                                                      "type": "text",
+                                                                      "classes": [
+                                                                        "link",
+                                                                        "link-pointer"
+                                                                      ],
+                                                                      "components": [
+                                                                        {
+                                                                          "type": "textnode",
+                                                                          "content": "Learn more"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "type": "comment",
+                                                                  "content": " End Card "
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "comment",
+                                                              "content": " End Col "
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "comment",
+                                                          "content": " End Row "
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "classes": [
+                                                    "col-lg-4"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "classes": [
+                                                        "navbar-dropdown-menu-inner"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "dropdown-header"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Classic"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../blog-modern.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Modern "
+                                                            },
+                                                            {
+                                                              "tagName": "span",
+                                                              "type": "text",
+                                                              "classes": [
+                                                                "badge",
+                                                                "text-primary"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "textnode",
+                                                                  "content": "New"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../blog-grid.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Grid"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../blog-list.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "List"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../blog-article.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Article "
+                                                            },
+                                                            {
+                                                              "tagName": "span",
+                                                              "type": "text",
+                                                              "classes": [
+                                                                "badge",
+                                                                "text-primary"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "textnode",
+                                                                  "content": "New"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "link",
+                                                          "classes": [
+                                                            "dropdown-item"
+                                                          ],
+                                                          "attributes": {
+                                                            "href": "../blog-author-profile.html"
+                                                          },
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Author Profile"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "comment",
+                                              "content": " End Main Content "
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " End Mega Menu "
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End Blog "
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " Docs "
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "classes": [
+                                        "hs-has-mega-menu",
+                                        "nav-item"
+                                      ],
+                                      "attributes": {
+                                        "data-hs-mega-menu-item-options": "{\n                        \"desktop\": {\n                        \"maxWidth\": \"20rem\"\n                        }\n                    }"
+                                      },
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "hs-mega-menu-invoker",
+                                            "nav-link",
+                                            "dropdown-toggle"
+                                          ],
+                                          "attributes": {
+                                            "id": "docsMegaMenu",
+                                            "href": "#",
+                                            "role": "button",
+                                            "aria-expanded": "false"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Docs"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " Mega Menu "
+                                        },
+                                        {
+                                          "classes": [
+                                            "hs-mega-menu",
+                                            "hs-position-right-fix",
+                                            "dropdown-menu"
+                                          ],
+                                          "attributes": {
+                                            "aria-labelledby": "docsMegaMenu",
+                                            "id": "ir7vrf"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "comment",
+                                              "content": " Link "
+                                            },
+                                            {
+                                              "type": "link",
+                                              "editable": false,
+                                              "classes": [
+                                                "navbar-dropdown-menu-media-link"
+                                              ],
+                                              "attributes": {
+                                                "href": "../documentation/index.html"
+                                              },
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "d-flex"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "classes": [
+                                                        "flex-shrink-0"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "bi-file-earmark-text",
+                                                            "fs-2",
+                                                            "text-dark"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "classes": [
+                                                        "flex-grow-1",
+                                                        "ms-3"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "navbar-dropdown-menu-media-title"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Documentation "
+                                                            },
+                                                            {
+                                                              "tagName": "span",
+                                                              "type": "text",
+                                                              "classes": [
+                                                                "badge",
+                                                                "badge-sm",
+                                                                "bg-primary",
+                                                                "rounded-pill",
+                                                                "ms-1"
+                                                              ],
+                                                              "components": [
+                                                                {
+                                                                  "type": "textnode",
+                                                                  "content": "v3.1"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "p",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "navbar-dropdown-menu-media-desc"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Development guides for building projects with Unify"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "comment",
+                                              "content": " End Link "
+                                            },
+                                            {
+                                              "classes": [
+                                                "dropdown-divider"
+                                              ]
+                                            },
+                                            {
+                                              "type": "comment",
+                                              "content": " Link "
+                                            },
+                                            {
+                                              "type": "link",
+                                              "editable": false,
+                                              "classes": [
+                                                "navbar-dropdown-menu-media-link"
+                                              ],
+                                              "attributes": {
+                                                "href": "../snippets/index.html"
+                                              },
+                                              "components": [
+                                                {
+                                                  "classes": [
+                                                    "d-flex"
+                                                  ],
+                                                  "components": [
+                                                    {
+                                                      "classes": [
+                                                        "flex-shrink-0"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "i",
+                                                          "classes": [
+                                                            "bi-layers",
+                                                            "fs-2",
+                                                            "text-dark"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "classes": [
+                                                        "flex-grow-1",
+                                                        "ms-3"
+                                                      ],
+                                                      "components": [
+                                                        {
+                                                          "tagName": "span",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "navbar-dropdown-menu-media-title"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Snippets"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "tagName": "p",
+                                                          "type": "text",
+                                                          "classes": [
+                                                            "navbar-dropdown-menu-media-desc"
+                                                          ],
+                                                          "components": [
+                                                            {
+                                                              "type": "textnode",
+                                                              "content": "Move quickly with copy-to-clipboard feature"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "comment",
+                                              "content": " End Link "
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " End Mega Menu "
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End Docs "
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " Log in "
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "classes": [
+                                        "nav-item",
+                                        "ms-lg-auto"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "btn",
+                                            "btn-ghost-dark",
+                                            "me-2",
+                                            "me-lg-0"
+                                          ],
+                                          "attributes": {
+                                            "href": "../page-login.html"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Log in"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "btn",
+                                            "btn-dark",
+                                            "d-lg-none"
+                                          ],
+                                          "attributes": {
+                                            "href": "../page-signup.html"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Sign up"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End Log in "
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " Sign up "
+                                    },
+                                    {
+                                      "tagName": "li",
+                                      "classes": [
+                                        "nav-item"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "link",
+                                          "classes": [
+                                            "btn",
+                                            "btn-dark",
+                                            "d-none",
+                                            "d-lg-inline-block"
+                                          ],
+                                          "attributes": {
+                                            "href": "../page-signup.html"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Sign up"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End Sign up "
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "comment",
+                              "content": " End Collapse "
+                            }
+                          ]
                         }
                       ]
                     }
                   ]
                 },
                 {
+                  "type": "comment",
+                  "content": " ========== END HEADER ========== "
+                },
+                {
                   "classes": [
-                    "overflow-hidden",
-                    "content-space-t-md-1"
+                    "container",
+                    "content-space-1"
                   ],
                   "components": [
                     {
                       "classes": [
-                        "container",
-                        "position-relative",
-                        "content-space-t-3",
-                        "content-space-b-2"
+                        "row",
+                        "justify-content-lg-between",
+                        "align-items-lg-center"
                       ],
                       "components": [
                         {
                           "classes": [
-                            "w-lg-75",
-                            "mx-lg-auto"
+                            "col-lg-5",
+                            "mb-5",
+                            "mb-lg-0"
                           ],
                           "components": [
                             {
                               "classes": [
-                                "text-center",
                                 "mb-5"
                               ],
                               "components": [
                                 {
-                                  "tagName": "span",
-                                  "type": "text",
-                                  "classes": [
-                                    "text-cap"
-                                  ],
-                                  "components": [
-                                    {
-                                      "type": "textnode",
-                                      "content": "Small business solutions"
-                                    }
-                                  ]
-                                },
-                                {
                                   "tagName": "h1",
                                   "type": "text",
                                   "classes": [
-                                    "display-4"
+                                    "display-4",
+                                    "text-dark",
+                                    "mb-5"
                                   ],
                                   "components": [
                                     {
                                       "type": "textnode",
-                                      "content": "Turn online shoppers into "
+                                      "content": "Start your journey with "
                                     },
                                     {
                                       "tagName": "span",
@@ -234,9 +1894,22 @@
                                       "components": [
                                         {
                                           "type": "textnode",
-                                          "content": "lifetime customers"
+                                          "content": "Unify"
                                         }
                                       ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tagName": "p",
+                                  "type": "text",
+                                  "classes": [
+                                    "fs-3"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Feature-rich components and designed demo pages help you create the best possible products."
                                     }
                                   ]
                                 }
@@ -244,149 +1917,438 @@
                             },
                             {
                               "classes": [
-                                "row",
-                                "justify-content-center",
-                                "align-items-sm-center",
-                                "col-sm-divider",
-                                "text-center",
-                                "text-sm-start",
-                                "gx-5",
-                                "mb-5",
-                                "mb-sm-7"
+                                "d-grid",
+                                "d-sm-flex",
+                                "gap-3",
+                                "mb-5"
+                              ],
+                              "components": [
+                                {
+                                  "type": "link",
+                                  "classes": [
+                                    "btn",
+                                    "btn-primary"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Request demo"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "link",
+                                  "classes": [
+                                    "btn",
+                                    "btn-ghost-dark",
+                                    "btn-pointer"
+                                  ],
+                                  "attributes": {
+                                    "href": "#"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Sign up free"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "comment",
+                          "content": " End Col "
+                        },
+                        {
+                          "classes": [
+                            "col-lg-6"
+                          ],
+                          "components": [
+                            {
+                              "classes": [
+                                "position-relative"
                               ],
                               "components": [
                                 {
                                   "classes": [
-                                    "col-sm-auto"
+                                    "position-relative"
                                   ],
                                   "components": [
                                     {
-                                      "type": "comment",
-                                      "content": " Avatar Group "
+                                      "type": "image",
+                                      "resizable": {
+                                        "ratioDefault": 1
+                                      },
+                                      "classes": [
+                                        "img-fluid"
+                                      ],
+                                      "attributes": {
+                                        "src": "./assets/img/950x950/img1.jpg",
+                                        "alt": "Image Description"
+                                      }
                                     },
                                     {
                                       "classes": [
-                                        "avatar-group",
-                                        "avatar-group-sm",
-                                        "justify-content-center"
+                                        "position-absolute",
+                                        "bottom-0",
+                                        "end-0"
                                       ],
                                       "components": [
                                         {
-                                          "tagName": "span",
+                                          "type": "image",
+                                          "resizable": {
+                                            "ratioDefault": 1
+                                          },
                                           "classes": [
-                                            "avatar",
-                                            "avatar-circle"
+                                            "w-100"
                                           ],
-                                          "components": [
-                                            {
-                                              "type": "image",
-                                              "resizable": {
-                                                "ratioDefault": 1
-                                              },
-                                              "classes": [
-                                                "avatar-img"
-                                              ],
-                                              "attributes": {
-                                                "src": "./src/assets/img/160x160/img10.jpg",
-                                                "alt": "Image Description"
-                                              }
-                                            }
-                                          ]
-                                        },
+                                          "attributes": {
+                                            "src": "./assets/svg/illustrations/cubics.svg",
+                                            "alt": "SVG",
+                                            "id": "ild9ye"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "comment",
+                                  "content": " Media "
+                                },
+                                {
+                                  "classes": [
+                                    "d-inline-block",
+                                    "position-absolute",
+                                    "top-0",
+                                    "start-0",
+                                    "bg-white",
+                                    "w-100",
+                                    "rounded-pill",
+                                    "shadow-sm",
+                                    "p-2",
+                                    "mt-5",
+                                    "ms-n5"
+                                  ],
+                                  "attributes": {
+                                    "id": "it7hpj"
+                                  },
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "d-flex",
+                                        "align-items-center"
+                                      ],
+                                      "components": [
                                         {
-                                          "tagName": "span",
                                           "classes": [
-                                            "avatar",
-                                            "avatar-circle"
-                                          ],
-                                          "components": [
-                                            {
-                                              "type": "image",
-                                              "resizable": {
-                                                "ratioDefault": 1
-                                              },
-                                              "classes": [
-                                                "avatar-img"
-                                              ],
-                                              "attributes": {
-                                                "src": "./src/assets/img/160x160/img3.jpg",
-                                                "alt": "Image Description"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tagName": "span",
-                                          "classes": [
-                                            "avatar",
-                                            "avatar-circle"
-                                          ],
-                                          "components": [
-                                            {
-                                              "type": "image",
-                                              "resizable": {
-                                                "ratioDefault": 1
-                                              },
-                                              "classes": [
-                                                "avatar-img"
-                                              ],
-                                              "attributes": {
-                                                "src": "./src/assets/img/160x160/img9.jpg",
-                                                "alt": "Image Description"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tagName": "span",
-                                          "classes": [
-                                            "avatar",
-                                            "avatar-circle"
-                                          ],
-                                          "components": [
-                                            {
-                                              "type": "image",
-                                              "resizable": {
-                                                "ratioDefault": 1
-                                              },
-                                              "classes": [
-                                                "avatar-img"
-                                              ],
-                                              "attributes": {
-                                                "src": "./src/assets/img/160x160/img8.jpg",
-                                                "alt": "Image Description"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "tagName": "span",
-                                          "classes": [
-                                            "avatar",
-                                            "avatar-dark",
-                                            "avatar-circle"
+                                            "flex-shrink-0"
                                           ],
                                           "components": [
                                             {
                                               "tagName": "span",
+                                              "classes": [
+                                                "avatar",
+                                                "avatar-sm",
+                                                "avatar-circle"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "image",
+                                                  "resizable": {
+                                                    "ratioDefault": 1
+                                                  },
+                                                  "classes": [
+                                                    "avatar-img"
+                                                  ],
+                                                  "attributes": {
+                                                    "src": "./assets/img/160x160/img10.jpg",
+                                                    "alt": "Image Description"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "flex-grow-1",
+                                            "ms-2"
+                                          ],
+                                          "components": [
+                                            {
                                               "type": "text",
                                               "classes": [
-                                                "avatar-initials"
+                                                "fs-5",
+                                                "fw-bold",
+                                                "mb-0"
                                               ],
                                               "components": [
                                                 {
                                                   "type": "textnode",
-                                                  "content": "7k+"
+                                                  "content": "Julia"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "span",
+                                              "type": "text",
+                                              "classes": [
+                                                "d-block",
+                                                "fs-6"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Fantastic theme!"
                                                 }
                                               ]
                                             }
                                           ]
                                         }
                                       ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "comment",
+                                  "content": " End Media "
+                                },
+                                {
+                                  "type": "comment",
+                                  "content": " Media "
+                                },
+                                {
+                                  "classes": [
+                                    "d-inline-block",
+                                    "position-absolute",
+                                    "bottom-0",
+                                    "start-0",
+                                    "bg-warning",
+                                    "w-100",
+                                    "rounded-pill",
+                                    "shadow-sm",
+                                    "p-2",
+                                    "mb-10",
+                                    "ms-n10"
+                                  ],
+                                  "attributes": {
+                                    "id": "if9m5h"
+                                  },
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "d-flex",
+                                        "align-items-center"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "flex-shrink-0"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "span",
+                                              "classes": [
+                                                "avatar",
+                                                "avatar-sm",
+                                                "avatar-circle"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "image",
+                                                  "resizable": {
+                                                    "ratioDefault": 1
+                                                  },
+                                                  "classes": [
+                                                    "avatar-img"
+                                                  ],
+                                                  "attributes": {
+                                                    "src": "../assets/img/160x160/img3.jpg",
+                                                    "alt": "Image Description"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "classes": [
+                                            "flex-grow-1",
+                                            "ms-2"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "text",
+                                              "classes": [
+                                                "fs-5",
+                                                "fw-bold",
+                                                "text-dark",
+                                                "mb-0"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Michael"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tagName": "span",
+                                              "type": "text",
+                                              "classes": [
+                                                "d-block",
+                                                "fs-6",
+                                                "text-dark"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Excellent documentation 🔥👋"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "comment",
+                                  "content": " End Media "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "comment",
+                          "content": " End Col "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "content": " End Row "
+                    },
+                    {
+                      "classes": [
+                        "overflow-hidden"
+                      ],
+                      "components": [
+                        {
+                          "classes": [
+                            "container",
+                            "content-space-1"
+                          ],
+                          "components": [
+                            {
+                              "classes": [
+                                "row",
+                                "align-items-lg-center"
+                              ],
+                              "components": [
+                                {
+                                  "classes": [
+                                    "col-lg-7",
+                                    "me-auto",
+                                    "ms-lg-n10",
+                                    "mb-5",
+                                    "mb-lg-0"
+                                  ],
+                                  "components": [
+                                    {
+                                      "classes": [
+                                        "row",
+                                        "align-items-center"
+                                      ],
+                                      "components": [
+                                        {
+                                          "classes": [
+                                            "col-4"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid",
+                                                "rounded-3"
+                                              ],
+                                              "attributes": {
+                                                "src": "./assets/img/580x480/img1.jpg",
+                                                "alt": "Image Description"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " End Col "
+                                        },
+                                        {
+                                          "classes": [
+                                            "col-3"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid",
+                                                "rounded-3"
+                                              ],
+                                              "attributes": {
+                                                "src": "./assets/img/350x700/img1.jpg",
+                                                "alt": "Image Description"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " End Col "
+                                        },
+                                        {
+                                          "classes": [
+                                            "col-5"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "img-fluid",
+                                                "rounded-3"
+                                              ],
+                                              "attributes": {
+                                                "src": "./assets/img/400x700/img1.jpg",
+                                                "alt": "Image Description"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "comment",
+                                          "content": " End Col "
+                                        }
+                                      ]
                                     },
                                     {
                                       "type": "comment",
-                                      "content": " End Avatar Group "
+                                      "content": " End Row "
                                     }
                                   ]
                                 },
@@ -396,35 +2358,118 @@
                                 },
                                 {
                                   "classes": [
-                                    "col-sm-auto"
+                                    "col-lg-5"
                                   ],
                                   "components": [
                                     {
-                                      "tagName": "h5",
-                                      "type": "text",
                                       "classes": [
-                                        "mb-0"
+                                        "mb-5"
                                       ],
                                       "components": [
                                         {
-                                          "type": "textnode",
-                                          "content": "Trust pilot"
+                                          "tagName": "h2",
+                                          "type": "text",
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Collaborative tools to design user experience"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "p",
+                                          "type": "text",
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Use our tools to explore your ideas and make your vision come true. Then share your work easily."
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "tagName": "span",
-                                      "type": "text",
+                                      "type": "comment",
+                                      "content": " List Checked "
+                                    },
+                                    {
+                                      "tagName": "ul",
                                       "classes": [
-                                        "d-block",
-                                        "fs-5"
+                                        "list-checked",
+                                        "list-checked-soft-bg-primary",
+                                        "list-checked-lg"
                                       ],
                                       "components": [
                                         {
-                                          "type": "textnode",
-                                          "content": "Rated best over 37k reviews"
+                                          "tagName": "li",
+                                          "type": "text",
+                                          "classes": [
+                                            "list-checked-item"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "span",
+                                              "type": "text",
+                                              "classes": [
+                                                "fw-bold"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "Less routine"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "textnode",
+                                              "content": " – more creativity"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "type": "text",
+                                          "classes": [
+                                            "list-checked-item"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Hundreds of thousands saved"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "li",
+                                          "type": "text",
+                                          "classes": [
+                                            "list-checked-item"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Scale budgets "
+                                            },
+                                            {
+                                              "tagName": "span",
+                                              "type": "text",
+                                              "classes": [
+                                                "fw-bold"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "efficiently"
+                                                }
+                                              ]
+                                            }
+                                          ]
                                         }
                                       ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End List Checked "
                                     }
                                   ]
                                 },
@@ -439,206 +2484,12 @@
                               "content": " End Row "
                             }
                           ]
-                        },
-                        {
-                          "classes": [
-                            "w-lg-65",
-                            "mx-lg-auto"
-                          ],
-                          "components": [
-                            {
-                              "type": "comment",
-                              "content": " Input Card "
-                            },
-                            {
-                              "type": "form",
-                              "attributes": {
-                                "method": "get"
-                              },
-                              "components": [
-                                {
-                                  "classes": [
-                                    "input-card",
-                                    "input-card-sm"
-                                  ],
-                                  "components": [
-                                    {
-                                      "classes": [
-                                        "input-card-form"
-                                      ],
-                                      "components": [
-                                        {
-                                          "type": "label",
-                                          "classes": [
-                                            "form-label",
-                                            "visually-hidden"
-                                          ],
-                                          "attributes": {
-                                            "for": "nameRegisterForm"
-                                          },
-                                          "components": [
-                                            {
-                                              "type": "textnode",
-                                              "content": "Enter your name"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "input",
-                                          "void": true,
-                                          "classes": [
-                                            "form-control",
-                                            "form-control-lg"
-                                          ],
-                                          "attributes": {
-                                            "type": "text",
-                                            "id": "nameRegisterForm",
-                                            "placeholder": "Your name",
-                                            "aria-label": "Your name"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "classes": [
-                                        "input-card-form"
-                                      ],
-                                      "components": [
-                                        {
-                                          "type": "label",
-                                          "classes": [
-                                            "form-label",
-                                            "visually-hidden"
-                                          ],
-                                          "attributes": {
-                                            "for": "emailRegisterForm"
-                                          },
-                                          "components": [
-                                            {
-                                              "type": "textnode",
-                                              "content": "Enter email"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "input",
-                                          "void": true,
-                                          "classes": [
-                                            "form-control",
-                                            "form-control-lg"
-                                          ],
-                                          "attributes": {
-                                            "type": "text",
-                                            "id": "emailRegisterForm",
-                                            "placeholder": "Your email",
-                                            "aria-label": "Your email"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "button",
-                                      "classes": [
-                                        "btn",
-                                        "btn-primary",
-                                        "btn-lg"
-                                      ],
-                                      "attributes": {
-                                        "type": "button"
-                                      },
-                                      "text": "Get started",
-                                      "components": [
-                                        {
-                                          "type": "textnode",
-                                          "content": "Get started"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "comment",
-                              "content": " End Input Card "
-                            },
-                            {
-                              "type": "comment",
-                              "content": " SVG Shape "
-                            },
-                            {
-                              "tagName": "figure",
-                              "classes": [
-                                "position-absolute",
-                                "top-50",
-                                "end-0",
-                                "translate-middle-y",
-                                "d-none",
-                                "d-md-block"
-                              ],
-                              "attributes": {
-                                "id": "ipk4i"
-                              },
-                              "components": [
-                                {
-                                  "type": "image",
-                                  "resizable": {
-                                    "ratioDefault": 1
-                                  },
-                                  "classes": [
-                                    "img-fluid"
-                                  ],
-                                  "attributes": {
-                                    "src": "./src/assets/svg/components/three-arrows-1.svg",
-                                    "alt": "Image Description"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "comment",
-                              "content": " End SVG Shape "
-                            },
-                            {
-                              "type": "comment",
-                              "content": " SVG Shape "
-                            },
-                            {
-                              "tagName": "figure",
-                              "classes": [
-                                "position-absolute",
-                                "top-50",
-                                "start-0",
-                                "translate-middle-y",
-                                "d-none",
-                                "d-md-block"
-                              ],
-                              "attributes": {
-                                "id": "irfqw"
-                              },
-                              "components": [
-                                {
-                                  "type": "image",
-                                  "resizable": {
-                                    "ratioDefault": 1
-                                  },
-                                  "classes": [
-                                    "img-fluid"
-                                  ],
-                                  "attributes": {
-                                    "src": "./src/assets/svg/components/three-arrows-2.svg",
-                                    "alt": "Image Description"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "comment",
-                              "content": " End SVG Shape "
-                            }
-                          ]
                         }
                       ]
+                    },
+                    {
+                      "type": "comment",
+                      "content": " End Features "
                     }
                   ]
                 },
@@ -665,9 +2516,9 @@
     "dataSources": []
   },
   "html": {
-    "htmlContent": "<body><div class=\"gjs-row\" id=\"ikqx\"><div class=\"gjs-cell\"></div></div><div class=\"overflow-hidden content-space-t-md-1\"><div class=\"container position-relative content-space-t-3 content-space-b-2\"><div class=\"w-lg-75 mx-lg-auto\"><div class=\"text-center mb-5\"><span class=\"text-cap\">Small business solutions</span><h1 class=\"display-4\">Turn online shoppers into <span class=\"text-primary\">lifetime customers</span></h1></div><div class=\"row justify-content-center align-items-sm-center col-sm-divider text-center text-sm-start gx-5 mb-5 mb-sm-7\"><div class=\"col-sm-auto\"><!-- Avatar Group --><div class=\"avatar-group avatar-group-sm justify-content-center\"><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img10.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img3.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img9.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img8.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-dark avatar-circle\"><span class=\"avatar-initials\">7k+</span></span></div><!-- End Avatar Group --></div><!-- End Col --><div class=\"col-sm-auto\"><h5 class=\"mb-0\">Trust pilot</h5><span class=\"d-block fs-5\">Rated best over 37k reviews</span></div><!-- End Col --></div><!-- End Row --></div><div class=\"w-lg-65 mx-lg-auto\"><!-- Input Card --><form method=\"get\"><div class=\"input-card input-card-sm\"><div class=\"input-card-form\"><label for=\"nameRegisterForm\" class=\"form-label visually-hidden\">Enter your name</label><input type=\"text\" id=\"nameRegisterForm\" placeholder=\"Your name\" aria-label=\"Your name\" class=\"form-control form-control-lg\"/></div><div class=\"input-card-form\"><label for=\"emailRegisterForm\" class=\"form-label visually-hidden\">Enter email</label><input type=\"text\" id=\"emailRegisterForm\" placeholder=\"Your email\" aria-label=\"Your email\" class=\"form-control form-control-lg\"/></div><button type=\"button\" class=\"btn btn-primary btn-lg\">Get started</button></div></form><!-- End Input Card --><!-- SVG Shape --><figure class=\"position-absolute top-50 end-0 translate-middle-y d-none d-md-block\" id=\"ipk4i\"><img src=\"./src/assets/svg/components/three-arrows-1.svg\" alt=\"Image Description\" class=\"img-fluid\"/></figure><!-- End SVG Shape --><!-- SVG Shape --><figure class=\"position-absolute top-50 start-0 translate-middle-y d-none d-md-block\" id=\"irfqw\"><img src=\"./src/assets/svg/components/three-arrows-2.svg\" alt=\"Image Description\" class=\"img-fluid\"/></figure><!-- End SVG Shape --></div></div></div><!-- End Hero --></body>"
+    "htmlContent": "<body id=\"iiga\"><header id=\"header-2\" class=\"navbar navbar-expand-lg navbar-center navbar-light bg-white\"><div class=\"container\"><nav class=\"js-mega-menu navbar-nav-wrap\"><!-- Default Logo --><a href=\"../index.html\" aria-label=\"Unify\" class=\"navbar-brand\"><img src=\"./assets/svg/logos/logo.svg\" alt=\"Image Description\" class=\"navbar-brand-logo\"/></a><!-- End Default Logo --><!-- Toggler --><button type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" class=\"navbar-toggler\">Send</button><!-- End Toggler --><!-- Collapse --><div id=\"navbarNavDropdown\" class=\"collapse navbar-collapse\"><ul class=\"navbar-nav nav-pills\"><!-- Landings --><li data-hs-mega-menu-item-options=\"{\n                        &quot;desktop&quot;: {\n                        &quot;maxWidth&quot;: &quot;40rem&quot;\n                        }\n                    }\" class=\"hs-has-mega-menu nav-item\"><a id=\"landingsMegaMenu\" aria-current=\"page\" href=\"#\" role=\"button\" aria-expanded=\"false\" class=\"hs-mega-menu-invoker nav-link dropdown-toggle\">Landings</a><!-- Mega Menu --><div aria-labelledby=\"landingsMegaMenu\" id=\"ivndn\" class=\"hs-mega-menu dropdown-menu\"><!-- Main Content --><div class=\"row\"><div class=\"col-lg d-none d-lg-block\"><div class=\"d-flex align-items-start flex-column bg-light rounded-3 h-100 p-4\"><span class=\"fs-3 fw-bold d-block\">Landings</span><p class=\"text-body\">Accelerate the way your business builds modern sites at scale.</p><div class=\"mt-auto\"><p class=\"mb-1\"><a href=\"#\" class=\"small text-dark\">Learn more <i class=\"bi-arrow-right-short fs-4\"></i></a></p><p class=\"mb-1\"><a href=\"#\" class=\"small text-dark\">Why Unify Template <i class=\"bi-arrow-right-short fs-4\"></i></a></p></div></div></div><div class=\"col-sm\"><div class=\"navbar-dropdown-menu-inner\"><span class=\"dropdown-header\">Classic</span><a href=\"../index.html\" class=\"dropdown-item\"><i class=\"bi-building me-2\"></i> Corporate</a><a href=\"../landing-business.html\" class=\"dropdown-item\"><i class=\"bi-briefcase me-2\"></i> Business <span class=\"badge text-primary\">New</span></a><a href=\"../landing-consulting.html\" class=\"dropdown-item\"><i class=\"bi-chat-right-dots me-2\"></i> Consulting <span class=\"badge text-primary\">New</span></a><a href=\"../landing-saas.html\" class=\"dropdown-item\"><i class=\"bi-tropical-storm me-2\"></i> SaaS</a><a href=\"../landing-services.html\" class=\"dropdown-item\"><i class=\"bi-gear me-2\"></i> Services</a></div></div></div><!-- End Main Content --></div><!-- End Mega Menu --></li><!-- End Landings --><!-- Pages --><li class=\"hs-has-mega-menu nav-item\"><a id=\"pagesMegaMenu\" href=\"#\" role=\"button\" aria-expanded=\"false\" class=\"hs-mega-menu-invoker nav-link dropdown-toggle\">Pages</a><!-- Mega Menu --><div aria-labelledby=\"pagesMegaMenu\" id=\"i8iy5\" class=\"hs-mega-menu hs-position-right dropdown-menu w-100\"><!-- Main Content --><div class=\"navbar-dropdown-menu-inner\"><div class=\"row\"><div class=\"col-sm-6 col-md-3\"><span class=\"dropdown-header\">Company</span><a href=\"../page-about.html\" class=\"dropdown-item\">About</a><a href=\"../page-customer-stories.html\" class=\"dropdown-item\">Customer Stories</a><a href=\"../page-customer-story.html\" class=\"dropdown-item\">Customer Story</a><a href=\"../page-help-center.html\" class=\"dropdown-item\">Help Center</a><a href=\"../page-help-center-categories.html\" class=\"dropdown-item\">Help Center: Categories</a><a href=\"../page-help-center-article.html\" class=\"dropdown-item\">Help Center: Article</a></div><div class=\"col-sm-6 col-md-3 mb-3 mb-md-0\"><span class=\"dropdown-header invisible\">Company</span><a href=\"../page-careers.html\" class=\"dropdown-item\">Careers</a><a href=\"../page-careers-role-overview.html\" class=\"dropdown-item\">Careers: Role Overview</a><a href=\"../page-careers-apply.html\" class=\"dropdown-item\">Careers: Apply</a><a href=\"../page-hire-us.html\" class=\"dropdown-item\">Hire Us</a><a href=\"../page-login.html\" class=\"dropdown-item\">Log In</a><a href=\"../page-signup.html\" class=\"dropdown-item\">Sign Up</a><a href=\"../page-reset-password.html\" class=\"dropdown-item\">Forgot Password</a></div><div class=\"col-sm-6 col-md-3 mb-3 mb-md-0\"><span class=\"dropdown-header\">Portfolio</span><a href=\"../portfolio-modern.html\" class=\"dropdown-item\">Modern</a><a href=\"../portfolio-case-study.html\" class=\"dropdown-item\">Case Study</a></div><div class=\"col-sm-6 col-md-3\"><span class=\"dropdown-header\">Specialty pages</span><a href=\"../page-pricing.html\" class=\"dropdown-item\">Pricing</a><a href=\"../page-contacts.html\" class=\"dropdown-item\">Contacts</a><a href=\"../page-coming-soon.html\" class=\"dropdown-item\">Coming Soon</a><a href=\"../page-coming-soon-simple.html\" class=\"dropdown-item\">Coming Soon: Simple</a><a href=\"../page-error-404.html\" class=\"dropdown-item\">Error 404</a><a href=\"../page-terms.html\" class=\"dropdown-item\">Terms &amp; Conditions</a><a href=\"../page-privacy.html\" class=\"dropdown-item\">Privacy &amp; Policy</a></div></div><!-- End Row --></div><!-- End Main Content --></div><!-- End Mega Menu --></li><!-- End Pages --><!-- Blog --><li data-hs-mega-menu-item-options=\"{\n                        &quot;desktop&quot;: {\n                        &quot;maxWidth&quot;: &quot;50rem&quot;\n                        }\n                    }\" class=\"hs-has-mega-menu nav-item\"><a id=\"blogMegaMenu\" href=\"#\" role=\"button\" aria-expanded=\"false\" class=\"hs-mega-menu-invoker nav-link dropdown-toggle\">Blog</a><!-- Mega Menu --><div aria-labelledby=\"blogMegaMenu\" id=\"i9yzaz\" class=\"hs-mega-menu dropdown-menu\"><!-- Main Content --><div class=\"row\"><div class=\"col-lg d-none d-lg-block\"><div class=\"bg-light rounded-3 h-100 p-4\"><span class=\"d-block fs-4 fw-bold text-dark mb-3\">Latest from the Blog</span><div class=\"row\"><div class=\"col-md-6 mb-3 mb-md-0\"><!-- Card --><a href=\"../documentation/index.html\" class=\"d-block\"><img src=\"../assets/svg/components/card-1.svg\" alt=\"Image Description\" class=\"img-fluid rounded-2 mb-2\"/><span class=\"fs-4 fw-medium text-dark text-inherit\">Documentation</span><p class=\"fs-6 text-body\">Development guides for building projects with Unify</p><span class=\"link link-pointer\">Learn more</span></a><!-- End Card --></div><!-- End Col --><div class=\"col-md-6\"><!-- Card --><a href=\"../snippets/index.html\" class=\"d-block\"><img src=\"../assets/svg/components/card-2.svg\" alt=\"Image Description\" class=\"img-fluid rounded-2 mb-2\"/><span class=\"fs-4 fw-medium text-dark text-inherit\">Snippets</span><p class=\"fs-6 text-body\">Move quickly with copy-to-clipboard feature</p><span class=\"link link-pointer\">Learn more</span></a><!-- End Card --></div><!-- End Col --></div><!-- End Row --></div></div><div class=\"col-lg-4\"><div class=\"navbar-dropdown-menu-inner\"><span class=\"dropdown-header\">Classic</span><a href=\"../blog-modern.html\" class=\"dropdown-item\">Modern <span class=\"badge text-primary\">New</span></a><a href=\"../blog-grid.html\" class=\"dropdown-item\">Grid</a><a href=\"../blog-list.html\" class=\"dropdown-item\">List</a><a href=\"../blog-article.html\" class=\"dropdown-item\">Article <span class=\"badge text-primary\">New</span></a><a href=\"../blog-author-profile.html\" class=\"dropdown-item\">Author Profile</a></div></div></div><!-- End Main Content --></div><!-- End Mega Menu --></li><!-- End Blog --><!-- Docs --><li data-hs-mega-menu-item-options=\"{\n                        &quot;desktop&quot;: {\n                        &quot;maxWidth&quot;: &quot;20rem&quot;\n                        }\n                    }\" class=\"hs-has-mega-menu nav-item\"><a id=\"docsMegaMenu\" href=\"#\" role=\"button\" aria-expanded=\"false\" class=\"hs-mega-menu-invoker nav-link dropdown-toggle\">Docs</a><!-- Mega Menu --><div aria-labelledby=\"docsMegaMenu\" id=\"ir7vrf\" class=\"hs-mega-menu hs-position-right-fix dropdown-menu\"><!-- Link --><a href=\"../documentation/index.html\" class=\"navbar-dropdown-menu-media-link\"><div class=\"d-flex\"><div class=\"flex-shrink-0\"><i class=\"bi-file-earmark-text fs-2 text-dark\"></i></div><div class=\"flex-grow-1 ms-3\"><span class=\"navbar-dropdown-menu-media-title\">Documentation <span class=\"badge badge-sm bg-primary rounded-pill ms-1\">v3.1</span></span><p class=\"navbar-dropdown-menu-media-desc\">Development guides for building projects with Unify</p></div></div></a><!-- End Link --><div class=\"dropdown-divider\"></div><!-- Link --><a href=\"../snippets/index.html\" class=\"navbar-dropdown-menu-media-link\"><div class=\"d-flex\"><div class=\"flex-shrink-0\"><i class=\"bi-layers fs-2 text-dark\"></i></div><div class=\"flex-grow-1 ms-3\"><span class=\"navbar-dropdown-menu-media-title\">Snippets</span><p class=\"navbar-dropdown-menu-media-desc\">Move quickly with copy-to-clipboard feature</p></div></div></a><!-- End Link --></div><!-- End Mega Menu --></li><!-- End Docs --><!-- Log in --><li class=\"nav-item ms-lg-auto\"><a href=\"../page-login.html\" class=\"btn btn-ghost-dark me-2 me-lg-0\">Log in</a><a href=\"../page-signup.html\" class=\"btn btn-dark d-lg-none\">Sign up</a></li><!-- End Log in --><!-- Sign up --><li class=\"nav-item\"><a href=\"../page-signup.html\" class=\"btn btn-dark d-none d-lg-inline-block\">Sign up</a></li><!-- End Sign up --></ul></div><!-- End Collapse --></nav></div></header><!-- ========== END HEADER ========== --><div class=\"container content-space-1\"><div class=\"row justify-content-lg-between align-items-lg-center\"><div class=\"col-lg-5 mb-5 mb-lg-0\"><div class=\"mb-5\"><h1 class=\"display-4 text-dark mb-5\">Start your journey with <span class=\"text-primary\">Unify</span></h1><p class=\"fs-3\">Feature-rich components and designed demo pages help you create the best possible products.</p></div><div class=\"d-grid d-sm-flex gap-3 mb-5\"><a href=\"#\" class=\"btn btn-primary\">Request demo</a><a href=\"#\" class=\"btn btn-ghost-dark btn-pointer\">Sign up free</a></div></div><!-- End Col --><div class=\"col-lg-6\"><div class=\"position-relative\"><div class=\"position-relative\"><img src=\"./assets/img/950x950/img1.jpg\" alt=\"Image Description\" class=\"img-fluid\"/><div class=\"position-absolute bottom-0 end-0\"><img src=\"./assets/svg/illustrations/cubics.svg\" alt=\"SVG\" id=\"ild9ye\" class=\"w-100\"/></div></div><!-- Media --><div id=\"it7hpj\" class=\"d-inline-block position-absolute top-0 start-0 bg-white w-100 rounded-pill shadow-sm p-2 mt-5 ms-n5\"><div class=\"d-flex align-items-center\"><div class=\"flex-shrink-0\"><span class=\"avatar avatar-sm avatar-circle\"><img src=\"./assets/img/160x160/img10.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span></div><div class=\"flex-grow-1 ms-2\"><div class=\"fs-5 fw-bold mb-0\">Julia</div><span class=\"d-block fs-6\">Fantastic theme!</span></div></div></div><!-- End Media --><!-- Media --><div id=\"if9m5h\" class=\"d-inline-block position-absolute bottom-0 start-0 bg-warning w-100 rounded-pill shadow-sm p-2 mb-10 ms-n10\"><div class=\"d-flex align-items-center\"><div class=\"flex-shrink-0\"><span class=\"avatar avatar-sm avatar-circle\"><img src=\"../assets/img/160x160/img3.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span></div><div class=\"flex-grow-1 ms-2\"><div class=\"fs-5 fw-bold text-dark mb-0\">Michael</div><span class=\"d-block fs-6 text-dark\">Excellent documentation 🔥👋</span></div></div></div><!-- End Media --></div></div><!-- End Col --></div><!-- End Row --><div class=\"overflow-hidden\"><div class=\"container content-space-1\"><div class=\"row align-items-lg-center\"><div class=\"col-lg-7 me-auto ms-lg-n10 mb-5 mb-lg-0\"><div class=\"row align-items-center\"><div class=\"col-4\"><img src=\"./assets/img/580x480/img1.jpg\" alt=\"Image Description\" class=\"img-fluid rounded-3\"/></div><!-- End Col --><div class=\"col-3\"><img src=\"./assets/img/350x700/img1.jpg\" alt=\"Image Description\" class=\"img-fluid rounded-3\"/></div><!-- End Col --><div class=\"col-5\"><img src=\"./assets/img/400x700/img1.jpg\" alt=\"Image Description\" class=\"img-fluid rounded-3\"/></div><!-- End Col --></div><!-- End Row --></div><!-- End Col --><div class=\"col-lg-5\"><div class=\"mb-5\"><h2>Collaborative tools to design user experience</h2><p>Use our tools to explore your ideas and make your vision come true. Then share your work easily.</p></div><!-- List Checked --><ul class=\"list-checked list-checked-soft-bg-primary list-checked-lg\"><li class=\"list-checked-item\"><span class=\"fw-bold\">Less routine</span> – more creativity</li><li class=\"list-checked-item\">Hundreds of thousands saved</li><li class=\"list-checked-item\">Scale budgets <span class=\"fw-bold\">efficiently</span></li></ul><!-- End List Checked --></div><!-- End Col --></div><!-- End Row --></div></div><!-- End Features --></div><!-- End Hero --></body>"
   },
   "css": {
-    "cssContent": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:table;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;width:100%;}.gjs-cell{width:8%;display:table-cell;height:75px;}#ipk4i{width:17rem;margin-right:-10rem;}#irfqw{width:14rem;margin-left:-10rem;}@media (max-width: 768px){.gjs-cell{width:100%;display:block;}}"
+    "cssContent": "* { box-sizing: border-box; } body {margin: 0;}#ivndn{min-width:25rem;}#i8iy5{min-width:42rem;}#i9yzaz{min-width:12rem;}#ir7vrf{min-width:20rem;}#ild9ye{max-width:30rem;}#it7hpj{max-width:12rem;}#if9m5h{max-width:16rem;}"
   }
 }
