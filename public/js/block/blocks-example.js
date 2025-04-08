@@ -18,16 +18,16 @@ export const blocksExample = {
                         <!-- Avatar Group -->
                         <div class="avatar-group avatar-group-sm justify-content-center">
                             <span class="avatar avatar-circle">
-                            <img class="avatar-img" src="../assets/assets/img/160x160/img10.jpg" alt="Image Description">
+                            <img class="avatar-img" src="./src/assets/img/160x160/img10.jpg" alt="Image Description">
                             </span>
                             <span class="avatar avatar-circle">
-                            <img class="avatar-img" src="../assets/assets/img/160x160/img3.jpg" alt="Image Description">
+                            <img class="avatar-img" src="./src/assets/img/160x160/img3.jpg" alt="Image Description">
                             </span>
                             <span class="avatar avatar-circle">
-                            <img class="avatar-img" src="../assets/assets/img/160x160/img9.jpg" alt="Image Description">
+                            <img class="avatar-img" src="./src/assets/img/160x160/img9.jpg" alt="Image Description">
                             </span>
                             <span class="avatar avatar-circle">
-                            <img class="avatar-img" src="../assets/assets/img/160x160/img8.jpg" alt="Image Description">
+                            <img class="avatar-img" src="./src/assets/img/160x160/img8.jpg" alt="Image Description">
                             </span>
                             <span class="avatar avatar-dark avatar-circle">
                             <span class="avatar-initials">7k+</span>
@@ -65,13 +65,13 @@ export const blocksExample = {
 
                     <!-- SVG Shape -->
                     <figure class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block" style="width: 17rem; margin-right: -10rem;">
-                        <img class="img-fluid" src="../assets/assets/svg/components/three-arrows-1.svg" alt="Image Description">
+                        <img class="img-fluid" src="./src/assets/svg/components/three-arrows-1.svg" alt="Image Description">
                     </figure>
                     <!-- End SVG Shape -->
 
                     <!-- SVG Shape -->
                     <figure class="position-absolute top-50 start-0 translate-middle-y d-none d-md-block" style="width: 14rem; margin-left: -10rem;">
-                        <img class="img-fluid" src="../assets/assets/svg/components/three-arrows-2.svg" alt="Image Description">
+                        <img class="img-fluid" src="./src/assets/svg/components/three-arrows-2.svg" alt="Image Description">
                     </figure>
                     <!-- End SVG Shape -->
                     </div>

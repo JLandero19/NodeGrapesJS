@@ -94,19 +94,20 @@
       },
       {
         "selectors": [
-          "#ixik"
+          "#ipk4i"
         ],
         "style": {
-          "color": "black",
-          "border": "10px solid red"
+          "width": "17rem",
+          "margin-right": "-10rem"
         }
       },
       {
         "selectors": [
-          "#ikz3i"
+          "#irfqw"
         ],
         "style": {
-          "padding": "10px"
+          "width": "14rem",
+          "margin-left": "-10rem"
         }
       }
     ],
@@ -125,9 +126,6 @@
                 "background-position",
                 "background-size"
               ],
-              "attributes": {
-                "id": "ijrh"
-              },
               "components": [
                 {
                   "name": "Row",
@@ -149,7 +147,7 @@
                     }
                   ],
                   "attributes": {
-                    "id": "iuoi"
+                    "id": "ikqx"
                   },
                   "components": [
                     {
@@ -173,214 +171,480 @@
                           "name": "gjs-cell",
                           "private": 1
                         }
-                      ],
-                      "components": [
-                        {
-                          "type": "image",
-                          "resizable": {
-                            "ratioDefault": 1
-                          },
-                          "attributes": {
-                            "id": "ixik",
-                            "src": "https://picsum.photos/id/237/200/300"
-                          }
-                        }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "classes": [
+                    "overflow-hidden",
+                    "content-space-t-md-1"
+                  ],
+                  "components": [
                     {
-                      "name": "Cell",
-                      "draggable": ".gjs-row",
-                      "resizable": {
-                        "tl": 0,
-                        "tc": 0,
-                        "tr": 0,
-                        "cl": 0,
-                        "cr": 1,
-                        "bl": 0,
-                        "br": 0,
-                        "minDim": 1,
-                        "bc": 0,
-                        "currentUnit": 1,
-                        "step": 0.2
-                      },
                       "classes": [
-                        {
-                          "name": "gjs-cell",
-                          "private": 1
-                        }
+                        "container",
+                        "position-relative",
+                        "content-space-t-3",
+                        "content-space-b-2"
                       ],
                       "components": [
                         {
-                          "type": "text",
-                          "attributes": {
-                            "id": "ikz3i"
-                          },
+                          "classes": [
+                            "w-lg-75",
+                            "mx-lg-auto"
+                          ],
                           "components": [
                             {
-                              "type": "textnode",
-                              "content": "Insert your text here"
+                              "classes": [
+                                "text-center",
+                                "mb-5"
+                              ],
+                              "components": [
+                                {
+                                  "tagName": "span",
+                                  "type": "text",
+                                  "classes": [
+                                    "text-cap"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Small business solutions"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tagName": "h1",
+                                  "type": "text",
+                                  "classes": [
+                                    "display-4"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Turn online shoppers into "
+                                    },
+                                    {
+                                      "tagName": "span",
+                                      "type": "text",
+                                      "classes": [
+                                        "text-primary"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "lifetime customers"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "classes": [
+                                "row",
+                                "justify-content-center",
+                                "align-items-sm-center",
+                                "col-sm-divider",
+                                "text-center",
+                                "text-sm-start",
+                                "gx-5",
+                                "mb-5",
+                                "mb-sm-7"
+                              ],
+                              "components": [
+                                {
+                                  "classes": [
+                                    "col-sm-auto"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "comment",
+                                      "content": " Avatar Group "
+                                    },
+                                    {
+                                      "classes": [
+                                        "avatar-group",
+                                        "avatar-group-sm",
+                                        "justify-content-center"
+                                      ],
+                                      "components": [
+                                        {
+                                          "tagName": "span",
+                                          "classes": [
+                                            "avatar",
+                                            "avatar-circle"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "avatar-img"
+                                              ],
+                                              "attributes": {
+                                                "src": "./src/assets/img/160x160/img10.jpg",
+                                                "alt": "Image Description"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "classes": [
+                                            "avatar",
+                                            "avatar-circle"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "avatar-img"
+                                              ],
+                                              "attributes": {
+                                                "src": "./src/assets/img/160x160/img3.jpg",
+                                                "alt": "Image Description"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "classes": [
+                                            "avatar",
+                                            "avatar-circle"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "avatar-img"
+                                              ],
+                                              "attributes": {
+                                                "src": "./src/assets/img/160x160/img9.jpg",
+                                                "alt": "Image Description"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "classes": [
+                                            "avatar",
+                                            "avatar-circle"
+                                          ],
+                                          "components": [
+                                            {
+                                              "type": "image",
+                                              "resizable": {
+                                                "ratioDefault": 1
+                                              },
+                                              "classes": [
+                                                "avatar-img"
+                                              ],
+                                              "attributes": {
+                                                "src": "./src/assets/img/160x160/img8.jpg",
+                                                "alt": "Image Description"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tagName": "span",
+                                          "classes": [
+                                            "avatar",
+                                            "avatar-dark",
+                                            "avatar-circle"
+                                          ],
+                                          "components": [
+                                            {
+                                              "tagName": "span",
+                                              "type": "text",
+                                              "classes": [
+                                                "avatar-initials"
+                                              ],
+                                              "components": [
+                                                {
+                                                  "type": "textnode",
+                                                  "content": "7k+"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "comment",
+                                      "content": " End Avatar Group "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "comment",
+                                  "content": " End Col "
+                                },
+                                {
+                                  "classes": [
+                                    "col-sm-auto"
+                                  ],
+                                  "components": [
+                                    {
+                                      "tagName": "h5",
+                                      "type": "text",
+                                      "classes": [
+                                        "mb-0"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Trust pilot"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tagName": "span",
+                                      "type": "text",
+                                      "classes": [
+                                        "d-block",
+                                        "fs-5"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Rated best over 37k reviews"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "comment",
+                                  "content": " End Col "
+                                }
+                              ]
+                            },
+                            {
+                              "type": "comment",
+                              "content": " End Row "
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Cell",
-                      "draggable": ".gjs-row",
-                      "resizable": {
-                        "tl": 0,
-                        "tc": 0,
-                        "tr": 0,
-                        "cl": 0,
-                        "cr": 1,
-                        "bl": 0,
-                        "br": 0,
-                        "minDim": 1,
-                        "bc": 0,
-                        "currentUnit": 1,
-                        "step": 0.2
-                      },
-                      "classes": [
+                        },
                         {
-                          "name": "gjs-cell",
-                          "private": 1
-                        }
-                      ],
-                      "attributes": {
-                        "id": "ifho"
-                      },
-                      "components": [
-                        {
-                          "type": "form",
-                          "attributes": {
-                            "method": "get",
-                            "id": "iiic3"
-                          },
+                          "classes": [
+                            "w-lg-65",
+                            "mx-lg-auto"
+                          ],
                           "components": [
                             {
+                              "type": "comment",
+                              "content": " Input Card "
+                            },
+                            {
+                              "type": "form",
+                              "attributes": {
+                                "method": "get"
+                              },
                               "components": [
                                 {
-                                  "type": "label",
+                                  "classes": [
+                                    "input-card",
+                                    "input-card-sm"
+                                  ],
                                   "components": [
                                     {
-                                      "type": "textnode",
-                                      "content": "Name"
+                                      "classes": [
+                                        "input-card-form"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "label",
+                                          "classes": [
+                                            "form-label",
+                                            "visually-hidden"
+                                          ],
+                                          "attributes": {
+                                            "for": "nameRegisterForm"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Enter your name"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "input",
+                                          "void": true,
+                                          "classes": [
+                                            "form-control",
+                                            "form-control-lg"
+                                          ],
+                                          "attributes": {
+                                            "type": "text",
+                                            "id": "nameRegisterForm",
+                                            "placeholder": "Your name",
+                                            "aria-label": "Your name"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "classes": [
+                                        "input-card-form"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "label",
+                                          "classes": [
+                                            "form-label",
+                                            "visually-hidden"
+                                          ],
+                                          "attributes": {
+                                            "for": "emailRegisterForm"
+                                          },
+                                          "components": [
+                                            {
+                                              "type": "textnode",
+                                              "content": "Enter email"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "input",
+                                          "void": true,
+                                          "classes": [
+                                            "form-control",
+                                            "form-control-lg"
+                                          ],
+                                          "attributes": {
+                                            "type": "text",
+                                            "id": "emailRegisterForm",
+                                            "placeholder": "Your email",
+                                            "aria-label": "Your email"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "button",
+                                      "classes": [
+                                        "btn",
+                                        "btn-primary",
+                                        "btn-lg"
+                                      ],
+                                      "attributes": {
+                                        "type": "button"
+                                      },
+                                      "text": "Get started",
+                                      "components": [
+                                        {
+                                          "type": "textnode",
+                                          "content": "Get started"
+                                        }
+                                      ]
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "input",
-                                  "void": true,
-                                  "attributes": {
-                                    "type": "text"
-                                  }
                                 }
                               ]
                             },
                             {
-                              "components": [
-                                {
-                                  "type": "label",
-                                  "components": [
-                                    {
-                                      "type": "textnode",
-                                      "content": "Email"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "input",
-                                  "void": true,
-                                  "attributes": {
-                                    "type": "email"
-                                  }
-                                }
-                              ]
+                              "type": "comment",
+                              "content": " End Input Card "
                             },
                             {
-                              "components": [
-                                {
-                                  "type": "label",
-                                  "components": [
-                                    {
-                                      "type": "textnode",
-                                      "content": "Gender"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "checkbox",
-                                  "void": true,
-                                  "attributes": {
-                                    "type": "checkbox",
-                                    "value": "M"
-                                  }
-                                },
-                                {
-                                  "type": "label",
-                                  "components": [
-                                    {
-                                      "type": "textnode",
-                                      "content": "M"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "checkbox",
-                                  "void": true,
-                                  "attributes": {
-                                    "type": "checkbox",
-                                    "value": "F"
-                                  }
-                                },
-                                {
-                                  "type": "label",
-                                  "components": [
-                                    {
-                                      "type": "textnode",
-                                      "content": "F"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "comment",
+                              "content": " SVG Shape "
                             },
                             {
+                              "tagName": "figure",
+                              "classes": [
+                                "position-absolute",
+                                "top-50",
+                                "end-0",
+                                "translate-middle-y",
+                                "d-none",
+                                "d-md-block"
+                              ],
+                              "attributes": {
+                                "id": "ipk4i"
+                              },
                               "components": [
                                 {
-                                  "type": "label",
-                                  "components": [
-                                    {
-                                      "type": "textnode",
-                                      "content": "Message"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "textarea"
-                                }
-                              ]
-                            },
-                            {
-                              "components": [
-                                {
-                                  "type": "button",
-                                  "attributes": {
-                                    "type": "button"
+                                  "type": "image",
+                                  "resizable": {
+                                    "ratioDefault": 1
                                   },
-                                  "components": [
-                                    {
-                                      "type": "textnode",
-                                      "content": "Send"
-                                    }
-                                  ]
+                                  "classes": [
+                                    "img-fluid"
+                                  ],
+                                  "attributes": {
+                                    "src": "./src/assets/svg/components/three-arrows-1.svg",
+                                    "alt": "Image Description"
+                                  }
                                 }
                               ]
+                            },
+                            {
+                              "type": "comment",
+                              "content": " End SVG Shape "
+                            },
+                            {
+                              "type": "comment",
+                              "content": " SVG Shape "
+                            },
+                            {
+                              "tagName": "figure",
+                              "classes": [
+                                "position-absolute",
+                                "top-50",
+                                "start-0",
+                                "translate-middle-y",
+                                "d-none",
+                                "d-md-block"
+                              ],
+                              "attributes": {
+                                "id": "irfqw"
+                              },
+                              "components": [
+                                {
+                                  "type": "image",
+                                  "resizable": {
+                                    "ratioDefault": 1
+                                  },
+                                  "classes": [
+                                    "img-fluid"
+                                  ],
+                                  "attributes": {
+                                    "src": "./src/assets/svg/components/three-arrows-2.svg",
+                                    "alt": "Image Description"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "comment",
+                              "content": " End SVG Shape "
                             }
                           ]
                         }
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "comment",
+                  "content": " End Hero "
                 }
               ],
               "head": {
@@ -390,20 +654,20 @@
                 "tagName": "html"
               }
             },
-            "id": "t85eqCbulUVBVe9g"
+            "id": "oKTW2x6mh8xN5hAD"
           }
         ],
         "type": "main",
-        "id": "GfyC4bO1fe0m6mgm"
+        "id": "mPSCMWNqSEbJKwuY"
       }
     ],
     "symbols": [],
     "dataSources": []
   },
   "html": {
-    "htmlContent": "<body id=\"ijrh\"><div class=\"gjs-row\" id=\"iuoi\"><div class=\"gjs-cell\"><img id=\"ixik\" src=\"https://picsum.photos/id/237/200/300\"/></div><div class=\"gjs-cell\"><div id=\"ikz3i\">Insert your text here</div></div><div class=\"gjs-cell\" id=\"ifho\"><form method=\"get\" id=\"iiic3\"><div><label>Name</label><input type=\"text\"/></div><div><label>Email</label><input type=\"email\"/></div><div><label>Gender</label><input type=\"checkbox\" value=\"M\"/><label>M</label><input type=\"checkbox\" value=\"F\"/><label>F</label></div><div><label>Message</label><textarea></textarea></div><div><button type=\"button\">Send</button></div></form></div></div></body>"
+    "htmlContent": "<body><div class=\"gjs-row\" id=\"ikqx\"><div class=\"gjs-cell\"></div></div><div class=\"overflow-hidden content-space-t-md-1\"><div class=\"container position-relative content-space-t-3 content-space-b-2\"><div class=\"w-lg-75 mx-lg-auto\"><div class=\"text-center mb-5\"><span class=\"text-cap\">Small business solutions</span><h1 class=\"display-4\">Turn online shoppers into <span class=\"text-primary\">lifetime customers</span></h1></div><div class=\"row justify-content-center align-items-sm-center col-sm-divider text-center text-sm-start gx-5 mb-5 mb-sm-7\"><div class=\"col-sm-auto\"><!-- Avatar Group --><div class=\"avatar-group avatar-group-sm justify-content-center\"><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img10.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img3.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img9.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-circle\"><img src=\"./src/assets/img/160x160/img8.jpg\" alt=\"Image Description\" class=\"avatar-img\"/></span><span class=\"avatar avatar-dark avatar-circle\"><span class=\"avatar-initials\">7k+</span></span></div><!-- End Avatar Group --></div><!-- End Col --><div class=\"col-sm-auto\"><h5 class=\"mb-0\">Trust pilot</h5><span class=\"d-block fs-5\">Rated best over 37k reviews</span></div><!-- End Col --></div><!-- End Row --></div><div class=\"w-lg-65 mx-lg-auto\"><!-- Input Card --><form method=\"get\"><div class=\"input-card input-card-sm\"><div class=\"input-card-form\"><label for=\"nameRegisterForm\" class=\"form-label visually-hidden\">Enter your name</label><input type=\"text\" id=\"nameRegisterForm\" placeholder=\"Your name\" aria-label=\"Your name\" class=\"form-control form-control-lg\"/></div><div class=\"input-card-form\"><label for=\"emailRegisterForm\" class=\"form-label visually-hidden\">Enter email</label><input type=\"text\" id=\"emailRegisterForm\" placeholder=\"Your email\" aria-label=\"Your email\" class=\"form-control form-control-lg\"/></div><button type=\"button\" class=\"btn btn-primary btn-lg\">Get started</button></div></form><!-- End Input Card --><!-- SVG Shape --><figure class=\"position-absolute top-50 end-0 translate-middle-y d-none d-md-block\" id=\"ipk4i\"><img src=\"./src/assets/svg/components/three-arrows-1.svg\" alt=\"Image Description\" class=\"img-fluid\"/></figure><!-- End SVG Shape --><!-- SVG Shape --><figure class=\"position-absolute top-50 start-0 translate-middle-y d-none d-md-block\" id=\"irfqw\"><img src=\"./src/assets/svg/components/three-arrows-2.svg\" alt=\"Image Description\" class=\"img-fluid\"/></figure><!-- End SVG Shape --></div></div></div><!-- End Hero --></body>"
   },
   "css": {
-    "cssContent": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:table;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;width:100%;}.gjs-cell{width:8%;display:table-cell;height:75px;}#ixik{color:black;border:10px solid red;}#ikz3i{padding:10px;}@media (max-width: 768px){.gjs-cell{width:100%;display:block;}}"
+    "cssContent": "* { box-sizing: border-box; } body {margin: 0;}.gjs-row{display:table;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;width:100%;}.gjs-cell{width:8%;display:table-cell;height:75px;}#ipk4i{width:17rem;margin-right:-10rem;}#irfqw{width:14rem;margin-left:-10rem;}@media (max-width: 768px){.gjs-cell{width:100%;display:block;}}"
   }
 }

@@ -3,7 +3,6 @@ const express = require('express');
 class Server {
     constructor() {
         this.app = express();
-        this.server = process.env.SERVER;
         this.port = process.env.PORT; // Recoge el puerto por el que escucha
         this.middleware;
     }
@@ -20,7 +19,7 @@ class Server {
     // Se pone a escuchar el servidor
     listen() {
         this.app.listen(this.port, () => {
-            console.log(`Servidor escuchando en ${this.server}:${this.port}`);
+            console.log(`Servidor escuchando en http://localhost:${this.port}`);
         });
     }
 }

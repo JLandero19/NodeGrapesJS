@@ -7,8 +7,6 @@ export async function loadPage(server, editor) {
         // Comprobamos si la respuesta fue exitosa
         if (response.ok) {
             const data = await response.json();  // Parseamos los datos JSON
-
-            localStorage.clear(); // Limpia el localStorage
             // Si los datos existen, cargarlos en el editor de GrapesJS
             console.log('Datos de la página cargados:', data);
             editor.loadProjectData(data);
@@ -31,9 +29,11 @@ export async function deletePage(server, editor) {
         // Comprobamos si la respuesta fue exitosa
         if (response.ok) {
             const data = await response.json();
+            // Aquí puedes hacer algo con los datos recibidos, como mostrar un mensaje
+            console.log('Página eliminada con éxito:', data);
         } else if (response.status === 404) {
             // Si no se encuentra el archivo
-            console.log('No hay ninguna página cargada');
+            console.log('No hay ninguna página cargada para eliminar');
         } else {
             throw new Error('No se pudo eliminar la página');
         }
@@ -42,19 +42,19 @@ export async function deletePage(server, editor) {
     }
 }
 
-export function downloadZIP() {
+export function downloadZIP(editor) {
     const modalCode = document.querySelector('.gjs-mdl-content');
-    const zip = document.createElement('button');
-    zip.id = 'download-zip-btn';
-    zip.textContent = 'Descargar ZIP';
-    zip.style.marginTop = '10px';
-    zip.style.padding = '10px';
-    zip.style.background = '#4CAF50';
-    zip.style.color = 'white';
-    zip.style.border = 'none';
-    zip.style.cursor = 'pointer';
+    const downloadBtn = document.createElement('button');
+    downloadBtn.id = 'download-zip-btn';
+    downloadBtn.textContent = 'Descargar ZIP';
+    downloadBtn.style.marginTop = '10px';
+    downloadBtn.style.padding = '10px';
+    downloadBtn.style.background = '#4CAF50';
+    downloadBtn.style.color = 'white';
+    downloadBtn.style.border = 'none';
+    downloadBtn.style.cursor = 'pointer';
 
-    zip.onclick = function () {
+    downloadBtn.onclick = function () {
         const zip = new JSZip();
         zip.file('index.html', editor.getHtml());
         zip.file('styles.css', editor.getCss());
@@ -67,5 +67,5 @@ export function downloadZIP() {
         });
     };
 
-    modalCode.appendChild(zip);
+    modalCode.appendChild(downloadBtn);
 }
