@@ -20,7 +20,7 @@ class Server {
     // Se pone a escuchar el servidor
     listen() {
         this.app.listen(this.port, () => {
-            console.log(`Servidor escuchando en http://localhost:${this.port}`);
+            console.log(`Servidor escuchando en ${this.domain}:${this.port}`);
         });
     }
 }

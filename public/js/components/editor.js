@@ -1,5 +1,5 @@
 import { blocksExample } from '../block/blocks-example.js';
-import { loadPage, deletePage, downloadZIP } from '../functions.js';
+import { loadPage, deletePage, downloadZIP, importJSON } from '../functions.js';
 
 export function editor() {
     const editor = grapesjs.init({
@@ -32,36 +32,6 @@ export function editor() {
                 ]
             },
         },
-        assetManager: {
-            upload: true,
-            assets: [
-                {
-                    type: 'image',
-                    src: 'https://picsum.photos/id/237/200/300',
-                    height: 300,
-                    width: 200,
-                    name: 'Ejemplo 1'
-                },
-                {
-                    type: 'image',
-                    src: 'https://picsum.photos/seed/picsum/200/300',
-                    height: 300,
-                    width: 200,
-                    name: 'Ejemplo 2'
-                },
-                {
-                    type: 'image',
-                    src: 'https://fastly.picsum.photos/id/287/1200/800.jpg?hmac=e7Jgh7Yk7YtnlwGFvPly0-jKJZvIER9oSkZwisq3HoE',
-                    height: 800,
-                    width: 1200,
-                    name: 'Ejemplo Image Hero'
-                },
-            ],
-            // Configuración adicional (si es necesario)
-            // Enable the Asset Manager to show in the modal dialog
-            modalTitle: 'Selecciona una imagen',
-            modalCloseBtnText: 'Cerrar',
-        },
         canvas: {
             styles: [
                 "../../assets/vendor/bootstrap-icons/font/bootstrap-icons.css",
@@ -82,12 +52,8 @@ export function editor() {
     
     editor.on('load', () => {
         const blockManager = editor.BlockManager;
-    
-        for (const key in blocksExample) {
-            if (blocksExample.hasOwnProperty(key)) {
-                blockManager.add(key, blocksExample[key]);
-            }
-        }
+
+        importJSON(blockManager); // Importa el archivo JSON con los bloques del editor
     
         // Cambiar la categoría del bloque de tabs
         const tabsBlock = blockManager.get('tabs');

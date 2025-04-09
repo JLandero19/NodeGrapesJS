@@ -70,3 +70,20 @@ export function downloadZIP(editor) {
 
     modalCode.appendChild(downloadBtn);
 }
+
+export function importJSON(blockManager) {
+    fetch('./js/block/blocks-example.json')
+        .then(response => response.json())  // Convierte la respuesta a formato JSON
+        .then(data => {
+            // console.log(data);  // Aquí tienes el contenido del JSON
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    blockManager.add(key, data[key]);
+                }
+            }
+            return data;
+        })
+        .catch(error => {
+            console.error('Error al obtener el archivo JSON:', error);
+        });
+}

@@ -1,0 +1,5 @@
+-> Crear un formulario que tiene la estructura para guardar un JSON. ✅
+-> Dentro del formulario poner categoría (Header, Footer, ...)
+-> La categorías hay que verlas dentro de la pagina de unify-v3
+
+
