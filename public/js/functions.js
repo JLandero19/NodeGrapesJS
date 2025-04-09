@@ -7,7 +7,7 @@ export async function loadPage(editor) {
         // Comprobamos si la respuesta fue exitosa
         if (response.ok) {
             const data = await response.json();  // Parseamos los datos JSON
-            
+
             // Si los datos existen, cargarlos en el editor de GrapesJS
             console.log('Datos de la página cargados:', data);
             editor.loadProjectData(data.data);

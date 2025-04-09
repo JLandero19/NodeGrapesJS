@@ -78,8 +78,45 @@ const loadPageGET =  (req, res = response) => {
     }
 }
 
+const addComponentPOST = (req, res = response) => {
+    const nuevoComponente = req.body;
+    const clave = nuevoComponente.label.toLowerCase();
+    const archivo = "example";//cambia esto por "nuevoComponente.category.toLowerCase();" y ya cada uno se guardara en su categoria correspondiente
+
+    const filePath = path.join(__dirname, "../public/js/block", `blocks-${archivo}.json`);
+
+    // Leer el archivo JSON existente
+    fs.readFile(filePath, "utf8", (err, data) => {
+        if (err) {
+            console.error("Error al leer el archivo:", err);
+            return res.status(500).json({ error: "Error al leer el archivo JSON." });
+        }
+
+        let componentes = {};
+
+        try {
+            componentes = JSON.parse(data);
+        } catch (parseError) {
+            console.error("Error al parsear JSON:", parseError);
+        }
+
+        // Agregar o reemplazar el componente
+        componentes[clave] = nuevoComponente;
+
+        // Escribir el nuevo JSON al archivo
+        fs.writeFile(filePath, JSON.stringify(componentes, null, 2), (err) => {
+            if (err) {
+                console.error("Error al guardar el archivo:", err);
+                return res.status(500).json({ error: "Error al guardar el archivo JSON." });
+            }
+            res.json({ mensaje: "Componente guardado correctamente." });
+        });
+    });
+};
+
 module.exports = {
     loadPageGET,
     deletePageGET,
-    savePagePOST
+    savePagePOST,
+    addComponentPOST
 }
