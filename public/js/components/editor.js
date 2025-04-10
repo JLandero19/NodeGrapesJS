@@ -1,5 +1,5 @@
-import { blocksExample } from '../block/blocks-example.js';
-import { loadPage, deletePage, downloadZIP, importJSON } from '../functions.js';
+// import { blocksExample } from '../block/blocks-example.js';
+import { loadPage, deletePage, downloadZIP, importJSON, createAlert } from '../functions.js';
 
 export function editor() {
     const editor = grapesjs.init({

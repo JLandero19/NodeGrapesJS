@@ -87,3 +87,22 @@ export function importJSON(blockManager) {
             console.error('Error al obtener el archivo JSON:', error);
         });
 }
+
+export function createAlert(type = "success", msg) {
+    const resultContent = document.getElementById("result-operation");
+    resultContent.innerHTML = "";
+    // Crear el div
+    const alertDiv = document.createElement('div');
+
+    // Agregar las clases de Bootstrap
+    alertDiv.classList.add('alert', `alert-${type}`);
+
+    // Establecer el atributo role
+    alertDiv.setAttribute('role', 'alert');
+
+    // Establecer el contenido del alert
+    alertDiv.textContent = msg;
+
+    // Finalmente lo puedes agregar al DOM, por ejemplo al body o a otro contenedor:
+    resultContent.appendChild(alertDiv); // o cualquier otro contenedor
+}
