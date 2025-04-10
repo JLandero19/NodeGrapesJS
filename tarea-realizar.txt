@@ -3,5 +3,5 @@
 -> La categorías hay que verlas dentro de la pagina de unify-v3 ✅
 -> Añadir nuevos componentes al JSON. ✅
 -> Realizar la inserción para poder ser por clases de manera rapida. ✅
-
+-> En el formulario, poner el cambio de icono
 

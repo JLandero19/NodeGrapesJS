@@ -126,7 +126,8 @@ class PageController {
             let key = newComponent.label.toLowerCase();
             key = key.replace(/\s+/g, "-"); // Reemplaza espacios por guiones
         
-            const filename = newComponent.category.toLowerCase();
+            let filename = newComponent.category.toLowerCase();
+            filename = filename.replace(/\s+/g, "-"); // Reemplaza espacios por guiones
             const filePath = path.join(__dirname, "../public/js/block", `blocks-${filename}.json`);
         
             // Verificar si el archivo existe
