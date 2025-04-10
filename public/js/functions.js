@@ -71,20 +71,38 @@ export function downloadZIP(editor) {
     modalCode.appendChild(downloadBtn);
 }
 
+// export function importJSON(blockManager) {
+//     fetch('./js/block/blocks-example.json')
+//         .then(response => response.json())  // Convierte la respuesta a formato JSON
+//         .then(data => {
+//             // console.log(data);  // Aquí tienes el contenido del JSON
+//             for (const key in data) {
+//                 if (data.hasOwnProperty(key)) {
+//                     blockManager.add(key, data[key]);
+//                 }
+//             }
+//             return data;
+//         })
+//         .catch(error => {
+//             console.error('Error al obtener el archivo JSON:', error);
+//         });
+// }
+
 export function importJSON(blockManager) {
-    fetch('./js/block/blocks-example.json')
+    fetch('/get-component')
         .then(response => response.json())  // Convierte la respuesta a formato JSON
-        .then(data => {
-            // console.log(data);  // Aquí tienes el contenido del JSON
-            for (const key in data) {
-                if (data.hasOwnProperty(key)) {
-                    blockManager.add(key, data[key]);
+        .then(dataArray => {
+            dataArray.forEach(item => {
+                const content = item.content;
+                for (const key in content) {
+                    if (content.hasOwnProperty(key)) {
+                        blockManager.add(key, content[key]);
+                    }
                 }
-            }
-            return data;
+            });
         })
         .catch(error => {
-            console.error('Error al obtener el archivo JSON:', error);
+            console.error('Error al obtener los bloques JSON:', error);
         });
 }
 

@@ -53,7 +53,7 @@ export function editor() {
     editor.on('load', () => {
         const blockManager = editor.BlockManager;
 
-        importJSON(blockManager); // Importa el archivo JSON con los bloques del editor
+        importJSON(blockManager); // Importa los archivos JSON con los bloques del editor
     
         // Cambiar la categoría del bloque de tabs
         const tabsBlock = blockManager.get('tabs');

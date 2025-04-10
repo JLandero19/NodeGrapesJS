@@ -43,16 +43,16 @@ const form = document.getElementById("add-component-form");
 form.addEventListener("submit", function (e) {
     e.preventDefault(); // Evita que se recargue la página
 
-    const name = document.getElementById("name").value;
-    const category = document.getElementById("category").value;
+    const nameValue = document.getElementById("name").value;
+    const categoryValue = document.getElementById("category").value;
     let contentValue = document.getElementById("content").value;
 
     contentValue = contentValue.replace(/"/g, '\"'); // Reemplazar comillas dobles
     contentValue = contentValue.replace(/[\n\r]/g, ''); // Quitar saltos de línea y retornos de carro
 
     const newComponent = {
-        label: name,
-        category: category,
+        label: nameValue,
+        category: categoryValue,
         attributes: { class: "fa fa-puzzle-piece" },
         content: contentValue
     };
