@@ -1,4 +1,5 @@
 import { loadPage, deletePage, downloadZIP, importJSON, createAlert } from './functions.js';
+import { getComponent } from './get-component.js';
 const categories = [
     "Headers", 
     "Hero Sections", 
@@ -65,14 +66,15 @@ form.addEventListener("submit", function (e) {
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data.mensaje);
+            console.log(data.message);
             
-            createAlert("success", data.mensaje);
+            createAlert("success", data.message);
 
             form.reset();
+            getComponent();
         })
         .catch(err => {
             console.error("Error al guardar:", err);
-            createAlert("danger", "No se ha podido guardar el componente.");
+            createAlert("danger", err);
         });
 });

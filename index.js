@@ -11,5 +11,6 @@ server.app.post('/save-page', PageController.savePagePOST);
 server.app.get('/delete-page', PageController.deletePageGET);
 server.app.post('/add-component', PageController.addComponentPOST);
 server.app.get('/get-component', PageController.loadBlockGET);
+server.app.post('/delete-component', PageController.deleteComponentPOST);
 
 server.listen();

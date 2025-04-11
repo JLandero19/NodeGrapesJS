@@ -101,7 +101,7 @@ class PageController {
                         if (!err) {
                             try {
                                 const jsonContent = JSON.parse(data);
-                                results.push({ filename: file, content: jsonContent });
+                                results.push({ filename: file, category: jsonContent.category, content: jsonContent.data });
                             } catch (parseError) {
                                 console.error(`Error parseando ${file}:`, parseError);
                             }
@@ -113,6 +113,8 @@ class PageController {
                         }
                     });
                 });
+
+                console.log(results); // Muestra los datos
             
                 // Por si no hay archivos
                 if (jsonFiles.length === 0) {
@@ -121,61 +123,136 @@ class PageController {
             });
         }
     
-        static addComponentPOST = (req, res = response) => {
-            const newComponent = req.body;
-            let key = newComponent.label.toLowerCase();
-            key = key.replace(/\s+/g, "-"); // Reemplaza espacios por guiones
-        
-            let filename = newComponent.category.toLowerCase();
-            filename = filename.replace(/\s+/g, "-"); // Reemplaza espacios por guiones
-            const filePath = path.join(__dirname, "../public/js/block", `blocks-${filename}.json`);
-        
-            // Verificar si el archivo existe
-            fs.access(filePath, fs.constants.F_OK, (err) => {
+        // Función para agregar componente al archivo JSON
+        static addComponentToFile(category, filename, key, newComponent, filePath, res) {
+            fs.readFile(filePath, "utf8", (err, data) => {
                 if (err) {
-                    // El archivo NO existe, lo creamos con un objeto vacío
-                    fs.writeFile(filePath, JSON.stringify({}, null, 2), 'utf8', (err) => {
-                        if (err) {
-                            console.error("Error al crear el archivo:", err);
-                            return res.status(500).json({ error: "Error al crear el archivo JSON." });
-                        }
-                        // Una vez creado, continuamos con el proceso normal
-                        addComponentToFile();
-                    });
-                } else {
-                    // El archivo ya existe, seguimos directamente
-                    addComponentToFile();
-                }
-            });
-        
-            // Función para añadir el componente al archivo JSON
-            function addComponentToFile() {
-                fs.readFile(filePath, "utf8", (err, data) => {
-                    if (err) {
+                    if (err.code === 'ENOENT') {
+                        // Si el archivo no existe, lo creamos con la categoría y el componente
+                        const componentes = {
+                            category: category,
+                            filename: filename,
+                            data: {
+                                [key]: newComponent
+                            }
+                        };
+
+                        // Escribimos el nuevo archivo
+                        fs.writeFile(filePath, JSON.stringify(componentes, null, 4), (err) => {
+                            if (err) {
+                                console.error("Error al guardar el archivo:", err);
+                                return res.status(500).json({ error: "Error al guardar el archivo JSON." });
+                            }
+
+                            res.json({ message: "Componente guardado correctamente en un nuevo archivo." });
+                        });
+                    } else {
+                        // Si ocurre otro error al leer el archivo
                         console.error("Error al leer el archivo:", err);
                         return res.status(500).json({ error: "Error al leer el archivo JSON." });
                     }
-        
+                } else {
                     let componentes = {};
+
                     try {
                         componentes = JSON.parse(data);
                     } catch (parseError) {
                         console.error("Error al parsear JSON:", parseError);
+                        return res.status(500).json({ error: "Archivo JSON corrupto." });
                     }
-        
+
+                    // Si el archivo existe, solo actualizamos la clave 'data'
+                    if (!componentes.data) {
+                        componentes.data = {};
+                    }
+
                     // Agregar o reemplazar el componente
-                    componentes[key] = newComponent;
-        
+                    componentes.data[key] = newComponent;
+
+                    // Guardar el archivo actualizado
                     fs.writeFile(filePath, JSON.stringify(componentes, null, 4), (err) => {
                         if (err) {
                             console.error("Error al guardar el archivo:", err);
                             return res.status(500).json({ error: "Error al guardar el archivo JSON." });
                         }
-        
-                        res.json({ mensaje: "Componente guardado correctamente." });
+
+                        res.json({ message: "Componente guardado correctamente." });
                     });
-                });
-            }
+                }
+            });
+        }
+
+        // Función para manejar la petición POST y agregar el componente
+        static addComponentPOST = (req, res = response) => {
+            const newComponent = req.body;
+            let key = newComponent.label.toLowerCase();
+            key = key.replace(/\s+/g, "-"); // Reemplaza espacios por guiones
+
+            let filename = newComponent.category.toLowerCase();
+            filename = filename.replace(/\s+/g, "-"); // Reemplaza espacios por guiones
+            const filePath = path.join(__dirname, "../public/js/block", `blocks-${filename}.json`);
+
+            // Verificar si el archivo existe
+            fs.access(filePath, fs.constants.F_OK, (err) => {
+                if (err) {
+                    // El archivo NO existe, lo creamos con un objeto vacío
+                    fs.writeFile(filePath, JSON.stringify({ category: newComponent.category, filename: `blocks-${filename}.json`, data: {} }, null, 2), 'utf8', (err) => {
+                        if (err) {
+                            console.error("Error al crear el archivo:", err);
+                            return res.status(500).json({ error: "Error al crear el archivo JSON." });
+                        }
+                        // Una vez creado, continuamos con el proceso normal
+                        PageController.addComponentToFile(newComponent.category, `blocks-${filename}.json`, key, newComponent, filePath, res);
+                    });
+                } else {
+                    // El archivo ya existe, seguimos directamente con la actualización
+                    PageController.addComponentToFile(newComponent.category, `blocks-${filename}.json`, key, newComponent, filePath, res);
+                }
+            });
+        };
+
+        // Función para manejar la petición POST y agregar el componente
+        static deleteComponentPOST = (req, res = response) => {
+            const dataComponent = req.body;
+            const key = dataComponent.key;
+            const filename = dataComponent.filename;
+    
+            const filePath = path.join(__dirname, "../public/js/block", filename);
+            
+            // Leer el archivo JSON
+            fs.readFile(filePath, 'utf8', (err, data) => {
+                if (err) {
+                    console.log('Error al leer el archivo:', err);
+                    return res.status(500).json({ message: 'Error al leer el archivo.' });
+                }
+    
+                try {
+                    // Parsear el JSON
+                    let jsonData = JSON.parse(data);
+    
+                    // Verificar si la propiedad 'data' existe en el JSON
+                    if (jsonData.data && jsonData.data[key]) {
+                        delete jsonData.data[key]; // Eliminar el objeto con la clave 'key'
+                        
+                        // Guardar el archivo JSON modificado
+                        fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+                            if (err) {
+                                console.log('Error al escribir el archivo:', err);
+                                return res.status(500).json({ message: 'Error al guardar el archivo.' });
+                            } else {
+                                console.log('Archivo JSON actualizado correctamente.');
+                                return res.status(200).json({ message: 'Componente eliminado exitosamente.' });
+                            }
+                        });
+                    } else {
+                        console.log('No se encontró el componente con la clave:', key);
+                        return res.status(404).json({ message: 'Componente no encontrado.' });
+                    }
+                } catch (parseError) {
+                    console.log('Error al parsear el JSON:', parseError);
+                    return res.status(500).json({ message: 'Error al parsear el archivo JSON.' });
+                }
+            });
         };
 }
 

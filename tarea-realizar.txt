@@ -5,3 +5,6 @@
 -> Realizar la inserción para poder ser por clases de manera rapida. ✅
 -> En el formulario, poner el cambio de icono
 
+-> Queda el borrado, no lo he podido implementar
+    (Dale un vistazo a get-component.js y al fichero public/add-component/index.html)
+    No me ha dado tiempo a más ...

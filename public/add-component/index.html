@@ -23,11 +23,12 @@
                 height: 38px;
                 padding: 5px 10px;
             }
-
+        
             .icon-preview {
                 font-size: 40px;
                 margin-top: 20px;
             }
+        
             .item-box {
                 position: relative;
                 border: 1px solid #ddd;
@@ -37,9 +38,16 @@
                 background-color: #f8f9fa;
                 height: 100%;
             }
+        
             .item-icon {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 margin-bottom: 10px;
+            }
+        
+            /* Hacer la card desplazable */
+            .categories {
+                max-height: 504px; /* Definir una altura máxima para la card */
+                overflow-y: auto;  /* Permite el desplazamiento vertical dentro de la card */
             }
         </style>
 
@@ -47,7 +55,7 @@
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
+        /> 
     </head>
 
     <body
@@ -146,120 +154,8 @@
                         <div class="card-header">
                             <h5 class="mb-0">Componentes creados</h5>
                         </div>
-                        <div class="card-body">
-                            <div class="accordion" id="accordionCategorias">
-                                <!-- Categoría 1 -->
-                                <div class="accordion-item">
-                                    <h2
-                                        class="accordion-header"
-                                        id="headingOne"
-                                    >
-                                        <button
-                                            class="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#categoria1"
-                                            aria-expanded="false"
-                                            aria-controls="categoria1"
-                                        >
-                                            Categoría 1
-                                        </button>
-                                    </h2>
-                                    <div
-                                        id="categoria1"
-                                        class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne"
-                                    >
-                                        <div class="accordion-body">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="item-box position-relative">
-                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </button>
-                                                        <div class="item-icon">
-                                                            📦
-                                                        </div>
-                                                        <div class="item-title">
-                                                            Elemento 1
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="item-box position-relative">
-                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </button>
-                                                        <div class="item-icon">
-                                                            🔧
-                                                        </div>
-                                                        <div class="item-title">
-                                                            Elemento 2
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Categoría 2 -->
-                                <div class="accordion-item">
-                                    <h2
-                                        class="accordion-header"
-                                        id="headingTwo"
-                                    >
-                                        <button
-                                            class="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#categoria2"
-                                            aria-expanded="false"
-                                            aria-controls="categoria2"
-                                        >
-                                            Categoría 2
-                                        </button>
-                                    </h2>
-                                    <div
-                                        id="categoria2"
-                                        class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo"
-                                    >
-                                        <div class="accordion-body">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="item-box position-relative">
-                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </button>
-                                                        <div class="item-icon">
-                                                            📚
-                                                        </div>
-                                                        <div class="item-title">
-                                                            Elemento A
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="item-box position-relative">
-                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </button>
-                                                        <div class="item-icon">
-                                                            🎨
-                                                        </div>
-                                                        <div class="item-title">
-                                                            Elemento B
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Puedes seguir agregando más categorías aquí -->
-                            </div>
+                        <div class="card-body categories">
+                            <div class="accordion" id="accordionCategories"></div>
                         </div>
                     </div>
                 </div>
@@ -274,7 +170,7 @@
 
         <script type="module" src="../js/select-icon.js"></script>
         <script type="module" src="../js/add-component.js"></script>
-        <!-- <script src="../js/pruebas.js"></script> -->
+        <script type="module" src="../js/get-component.js"></script>        
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
