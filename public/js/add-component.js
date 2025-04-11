@@ -45,6 +45,7 @@ form.addEventListener("submit", function (e) {
 
     const nameValue = document.getElementById("name").value;
     const categoryValue = document.getElementById("category").value;
+    let iconSelectValue = document.getElementById("icon-select").value;
     let contentValue = document.getElementById("content").value;
 
     contentValue = contentValue.replace(/"/g, '\"'); // Reemplazar comillas dobles
@@ -53,7 +54,7 @@ form.addEventListener("submit", function (e) {
     const newComponent = {
         label: nameValue,
         category: categoryValue,
-        attributes: { class: "fa fa-puzzle-piece" },
+        attributes: { class: (iconSelectValue != null && iconSelectValue != "") ? iconSelectValue : "fa fa-puzzle-piece" },
         content: contentValue
     };
 

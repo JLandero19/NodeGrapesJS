@@ -179,6 +179,4 @@ class PageController {
         };
 }
 
-
-
 module.exports = PageController
