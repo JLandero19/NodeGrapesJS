@@ -1,115 +1,285 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Añadir componente</title>
+        <!-- Bootstrap (opcional si ya lo tienes) -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Select2 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+            rel="stylesheet"
+        />
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Añadir componente</title>
-    <!-- Bootstrap (opcional si ya lo tienes) -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    />
-    <!-- Select2 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-        rel="stylesheet"
-    />
+        <style>
+            body {
+                height: 100vh;
+            }
+            .select2-container .select2-selection--single {
+                height: 38px;
+                padding: 5px 10px;
+            }
 
-    <style>
-        body {
-            height: 100vh;
-        }
-        .select2-container .select2-selection--single {
-            height: 38px;
-            padding: 5px 10px;
-        }
+            .icon-preview {
+                font-size: 40px;
+                margin-top: 20px;
+            }
+            .item-box {
+                position: relative;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+                background-color: #f8f9fa;
+                height: 100%;
+            }
+            .item-icon {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+        </style>
 
-        .icon-preview {
-            font-size: 40px;
-            margin-top: 20px;
-        }
-    </style>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+    </head>
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-</head>
+    <body
+        class="d-flex align-items-center justify-content-center full-height bg-dark"
+    >
+        <div class="container">
+            <div class="row justify-content-md-evenly">
+                <div class="col-md-6">
+                    <!-- Card que contiene el formulario -->
+                    <div class="card shadow-lg">
+                        <div class="card-header">
+                            <h4 class="card-title text-center">
+                                Añadir Componente
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="add-component-form">
+                                <!-- Campo de texto para el nombre -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label"
+                                        >Nombre</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="name"
+                                        placeholder="Ingresa tu nombre"
+                                        required
+                                    />
+                                </div>
 
-<body class="d-flex align-items-center justify-content-center full-height bg-dark">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                
-                <!-- Card que contiene el formulario -->
-                <div class="card shadow-lg">
-                    <div class="card-header">
-                        <h4 class="card-title text-center">
-                            Añadir Componente
-                        </h4>
+                                <!-- Selector de categorías -->
+                                <div class="mb-3">
+                                    <label for="category" class="form-label"
+                                        >Categoría</label
+                                    >
+                                    <select
+                                        class="form-select"
+                                        id="category"
+                                        required
+                                    >
+                                        <option value="" disabled selected>
+                                            Selecciona una categoría
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="icon-select" class="form-label"
+                                        >Selector del icono</label
+                                    >
+                                    <select
+                                        id="icon-select"
+                                        class="form-select"
+                                        style="width: 100%"
+                                    >
+                                        <option value="">
+                                            Cargando íconos...
+                                        </option>
+                                    </select>
+
+                                    <div
+                                        id="icon-preview"
+                                        class="icon-preview mt-4 text-primary"
+                                    ></div>
+                                </div>
+
+                                <!-- Campo de texto (textarea) para el contenido -->
+                                <div class="mb-3">
+                                    <label for="content" class="form-label"
+                                        >Contenido</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        id="content"
+                                        rows="4"
+                                        placeholder="Escribe el contenido aquí"
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                <!-- Botón de envío -->
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary w-100"
+                                >
+                                    Enviar
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <form id="add-component-form">
-                            <!-- Campo de texto para el nombre -->
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre"
-                                    required />
-                            </div>
+                    <div class="mt-2" id="result-operation"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Componentes creados</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="accordion" id="accordionCategorias">
+                                <!-- Categoría 1 -->
+                                <div class="accordion-item">
+                                    <h2
+                                        class="accordion-header"
+                                        id="headingOne"
+                                    >
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#categoria1"
+                                            aria-expanded="false"
+                                            aria-controls="categoria1"
+                                        >
+                                            Categoría 1
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="categoria1"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne"
+                                    >
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="item-box position-relative">
+                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                        <div class="item-icon">
+                                                            📦
+                                                        </div>
+                                                        <div class="item-title">
+                                                            Elemento 1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item-box position-relative">
+                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                        <div class="item-icon">
+                                                            🔧
+                                                        </div>
+                                                        <div class="item-title">
+                                                            Elemento 2
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <!-- Selector de categorías -->
-                            <div class="mb-3">
-                                <label for="category" class="form-label">Categoría</label>
-                                <select class="form-select" id="category" required>
-                                    <option value="" disabled selected>
-                                        Selecciona una categoría
-                                    </option>
-                                </select>
-                            </div>
+                                <!-- Categoría 2 -->
+                                <div class="accordion-item">
+                                    <h2
+                                        class="accordion-header"
+                                        id="headingTwo"
+                                    >
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#categoria2"
+                                            aria-expanded="false"
+                                            aria-controls="categoria2"
+                                        >
+                                            Categoría 2
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="categoria2"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo"
+                                    >
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="item-box position-relative">
+                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                        <div class="item-icon">
+                                                            📚
+                                                        </div>
+                                                        <div class="item-title">
+                                                            Elemento A
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="item-box position-relative">
+                                                        <button class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                        <div class="item-icon">
+                                                            🎨
+                                                        </div>
+                                                        <div class="item-title">
+                                                            Elemento B
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="mb-3">
-                                <label for="icon-select" class="form-label">Selector del icono</label>
-                                <select id="icon-select" class="form-select" style="width: 100%">
-                                    <option value="">Cargando íconos...</option>
-                                </select>
-                    
-                                <div id="icon-preview" class="icon-preview mt-4 text-primary"></div>
+                                <!-- Puedes seguir agregando más categorías aquí -->
                             </div>
-
-                            <!-- Campo de texto (textarea) para el contenido -->
-                            <div class="mb-3">
-                                <label for="content" class="form-label">Contenido</label>
-                                <textarea class="form-control" id="content" rows="4"
-                                    placeholder="Escribe el contenido aquí" required></textarea>
-                            </div>
-
-                            <!-- Botón de envío -->
-                            <button type="submit" class="btn btn-primary w-100">
-                                Enviar
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
-                <div class="mt-2" id="result-operation"></div>                
             </div>
         </div>
-    </div>
 
-    <!-- jQuery (requerido por Select2) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- jQuery (requerido por Select2) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <!-- Select2 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-    <script type="module" src="../js/select-icon.js"></script>
-    <script type="module" src="../js/add-component.js"></script>
-    <!-- <script src="../js/pruebas.js"></script> -->
+        <script type="module" src="../js/select-icon.js"></script>
+        <script type="module" src="../js/add-component.js"></script>
+        <!-- <script src="../js/pruebas.js"></script> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
-</body>
-
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
