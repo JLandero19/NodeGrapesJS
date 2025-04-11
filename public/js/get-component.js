@@ -9,7 +9,7 @@ export function getComponent() {
                 const category = item.category;
                 const filename = item.filename;
                 const content = item.content;
-                
+
                 if (Object.keys(content).length >= 1) {
                     contentCategory = ``;
                     contentCategory += `
@@ -48,7 +48,6 @@ export function getComponent() {
                                         </div>
                             `;
                         }
-
                     }
 
                     contentCategory += `                            
@@ -57,17 +56,24 @@ export function getComponent() {
                             </div>
                         </div>
                     `;
-                    
-                    container.innerHTML += contentCategory;
 
-                    for (const j in content) {
-                        document.getElementById(j).addEventListener("click", deleteComponent(filename, j));
-                    }
+                    container.innerHTML += contentCategory;
                 }
             });
             if (contentCategory == "") {
                 container.innerHTML += `<h5 class="text-center">No hay componentes</h5>`;
             }
+
+            dataArray.forEach((item) => {
+                const filename = item.filename;
+                const content = item.content;
+
+                for (const i in content) {
+                    if (content.hasOwnProperty(i)) {
+                        document.getElementById(i).addEventListener("click", () => deleteComponent(filename, i));
+                    }
+                }
+            });
         })
         .catch(error => {
             console.error('Error al obtener los bloques JSON:', error);
